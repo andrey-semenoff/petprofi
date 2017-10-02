@@ -1,0 +1,46 @@
+// ====== header ======= 
+header.header
+	._container
+		._row.header__menu
+			.enter
+				a.enter__link(href="#") enter
+
+			.main-menu
+				ul.main-menu__list
+					li.main-menu__item
+						a.main-menu__link Store
+					li.main-menu__item
+						a.main-menu__link FAQ
+					li.main-menu__item
+						a.main-menu__link Blog
+					li.main-menu__item
+						a.main-menu__link gallery
+					li.main-menu__item
+						a.main-menu__link Advertisements
+
+			.basket
+				a.basket__link(href="#") Basket (empty)
+		
+		._row.header__main
+			.logo
+				a.logo__link(href="/")
+					img.logo__img.logo__img_desktop(src="img/logo_desktop.svg", alt="logo")
+					img.logo__img.logo__img_tablet(src="img/logo_tablet.svg", alt="logo")
+					img.logo__img.logo__img_mobile(src="img/logo_mobile.svg", alt="logo")
+
+			.phones
+				ul.phones__list
+					li.phones__item
+						a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
+					li.phones__item
+						a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
+					//- li.phones__item
+					//- 	a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
+					//- li.phones__item
+					//- 	a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
+			
+			form._row.form_search#form_search
+				input.form_search__input(type="text" name="s" placeholder="search")
+				button.button.form_search__button(type="submit")
+					svg.icon
+						use(xlink:href="#search")

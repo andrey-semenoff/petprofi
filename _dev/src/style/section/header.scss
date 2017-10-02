@@ -1,0 +1,163 @@
+/*! ===== header styles ===== */
+
+header.header {
+	padding: 25px 0;
+  background: #2d87c6 url(../img/bg_header.jpg) center no-repeat;
+  background-size: cover;
+  font: 16px $OpenSans-Semibold;
+  color: #fff;
+}
+
+.header__main {
+	margin-top: 25px;
+	font-size: 0;
+}
+
+.logo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 15%;
+	max-width: 180px;
+	font-size: 16px;
+}
+
+.logo__link {
+
+}
+
+.logo__img {
+
+}
+
+.logo__img_desktop {
+
+}
+
+.logo__img_tablet {
+	display: none;
+}
+
+.logo__img_mobile {
+	display: none;
+}
+
+.phones {
+	display: inline-block;
+	vertical-align: middle;
+	width: 45%;
+	font-size: 16px;
+}
+
+.phones__list {
+
+}
+
+.phones__item {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.phones__link {
+	display: inline-block;
+	font: 25px $OpenSans-Semibold;
+	color: #fff;
+
+	&:hover {
+		color: $pink;
+		text-shadow: 0 0 5px #fff;
+	}
+}
+
+
+.form_search {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	width: 40%;
+	max-width: 500px;
+	border-radius: 50px;
+	overflow: hidden;
+	font-size: 16px;
+}
+
+.form_search__input {
+	width: 100%;
+	height: 50px;
+	padding: 10px 20px;
+}
+
+.form_search__button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 50px;
+	padding: 10px 20px;
+	text-align: center;
+	background-color: $lazure;
+
+	&:hover {
+		background-color: darken($lazure, 10%);
+	}
+	
+	.icon {
+		width: 30px;
+		height: 30px;
+		fill: #fff;
+
+	}
+}
+
+
+// .header__menu 
+.header__menu {
+	a {
+		color: #fff;
+
+		&:hover {
+			color: $pink;
+			text-shadow: 0 0 5px #fff;
+		}
+	}
+}
+
+.menu {
+	
+}
+
+.enter {
+	float: left;
+	width: 15%;
+	max-width: 180px;
+}
+
+.enter__link {
+
+}
+
+.main-menu {
+	float: left;
+	width: 70%;
+}
+
+.main-menu__list {
+
+}
+
+.main-menu__item {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.main-menu__link {
+
+}
+
+.basket {
+	float: right;
+	width: 15%;
+	max-width: 180px;
+}
+
+.basket__link {
+
+}
