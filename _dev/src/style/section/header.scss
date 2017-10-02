@@ -1,7 +1,7 @@
 /*! ===== header styles ===== */
 
 header.header {
-	padding: 25px 0;
+	padding: 25px 15px;
   background: #2d87c6 url(../img/bg_header.jpg) center no-repeat;
   background-size: cover;
   font: 16px $OpenSans-Semibold;
@@ -83,6 +83,7 @@ header.header {
 .form_search__input {
 	width: 100%;
 	height: 50px;
+	border-radius: 50px;
 	padding: 10px 20px;
 }
 

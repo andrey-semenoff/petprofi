@@ -9,3 +9,8 @@ mixin ul-list(cls, array, active_el, active_cls)
 			
 			li(class= cls + "__item")
 				a(href="#", class= clsName)= item
+
+//- Add svg path
+mixin symbol(id, cls)
+	svg(class=cls)
+		use(xlink:href="#"+id)

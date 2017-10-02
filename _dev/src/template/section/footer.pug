@@ -1,6 +1,52 @@
 // ====== footer ======= 
 footer.footer
-	|Sticky Footer of frontend template
+	._container
+		._row
+			.footer-col
+				.footer-col__title Контакты
+				._row
+					ul.footer__phones
+						li.footer__phone
+							a.footer__phone-link(href="tel:0487654321") (048) 765 43 21
+						li.footer__phone
+							a.footer__phone-link(href="tel:0487654321") (048) 765 43 21
+						li.footer__phone
+							a.footer__phone-link(href="tel:0487654321") (048) 765 43 21
+
+					ul.footer__socials
+						li.footer__social
+							a.footer__social-link(href="skype:manager.zooklass") 
+								+symbol('skype', 'icon')
+								span manager.zooklass
+						li.footer__social
+							a.footer__social-link(href="icq:zooklass.manager")
+								+symbol('icq', 'icon')
+								span zooklass.manager
+
+				.footer__address 
+					svg.icon
+						use(xlink:href="#navigate")
+					span г. Одесса, ул. Екатерининская, 22/4
+
+			.footer-col
+				.footer-col__title Доставка
+				p Как отмечает Майкл Мескон, баланс спроса и предложения переворачивает эмпирический стратегический рыночный план, осознав маркетинг производства. 
+				p Диктат потребителя недостаточно отталкивает баинг и селлинг, не считаясь. Идеология выстраивания бренда откровенна.
+				p Медиабизнес уравновешивает имидж отвоевывая рыночный сегмент.
+			
+			.footer-col
+				.footer-col__title Оплата
+				p Такое понимание ситуации восходит к Эл Райс, при этом анализ рыночных цен усиливает SWOT-анализ, учитывая результат предыдущих медиа-кампаний. Надо сказать, что показ баннера основан на опыте.  Создание приверженного покупателя однородно усиливает фирменный. формат.события, повышая конкуренцию. Бизнес-план детерминирует межличностный пак-шот, оптимизируя бюджеты.
+
+	.footer-bottom
+		._container
+			._row
+				.footer-bottom__left
+					span.copyright © 2013  Все права защищены.
+				.footer-bottom__right
+					img(src="img/logo_skylogic.png", alt="skylogic")
+
+
 
 // ====== scripts ======= 
 // Start Google analytics 

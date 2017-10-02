@@ -1,23 +1,212 @@
 extends ../main
 
 block content
-	|Content of index page
+	// ====== catalog ======= 
+	.catalog
+		._container
+			ul.catalog__list
+				li.catalog__item
+					a.catalog__link(href="#")
+						svg.icon
+							use(xlink:href="#animals--dog")
+						span.catalog__item-name Cобаки
+				li.catalog__item
+					a.catalog__link(href="#")
+						svg.icon
+							use(xlink:href="#animals--cat")
+						span.catalog__item-name Кошки
+				li.catalog__item
+					a.catalog__link(href="#")
+						svg.icon
+							use(xlink:href="#animals--goldfish")
+						span.catalog__item-name Аквариумистика
+				li.catalog__item
+					a.catalog__link(href="#")
+						svg.icon
+							use(xlink:href="#animals--bird")
+						span.catalog__item-name Птицы
+				li.catalog__item
+					a.catalog__link(href="#")
+						svg.icon
+							use(xlink:href="#animals--rodents")
+						span.catalog__item-name Грызуны
+				li.catalog__item
+					a.catalog__link(href="#")
+						svg.icon
+							use(xlink:href="#animals--trifles")
+						span.catalog__item-name Фретки
+				li.catalog__item
+					a.catalog__link(href="#")
+						svg.icon
+							use(xlink:href="#animals--reptiles")
+						span.catalog__item-name Рептилии
+				li.catalog__item
+					a.catalog__link(href="#")
+						svg.icon
+							use(xlink:href="#animals--fish")
+						span.catalog__item-name Пруд
+				li.catalog__item
+					a.catalog__link(href="#")
+						svg.icon
+							use(xlink:href="#animals--horse")
+						span.catalog__item-name Лошади
 
 	// ====== owl-carousel ======= 
-	.owl-carousel(data-type="common")
+	.owl-carousel(data-type="main")
 
 		.carousel__item 
-			img(src="img/spriteIcons.png")
-		.carousel__item
-			img(src="img/spriteIcons.png")
-		.carousel__item
-			img(src="img/spriteIcons.png")
-		.carousel__item
-			img(src="img/spriteIcons.png")
-		.carousel__item
-			img(src="img/spriteIcons.png")
+			img(src="img/slider/slide_1.jpg")
+		.carousel__item 
+			img(src="img/slider/slide_2.jpg")
+		.carousel__item 
+			img(src="img/slider/slide_3.jpg")
+		.carousel__item 
+			img(src="img/slider/slide_3.jpg")
 
-	// ====== google-map ======= 
-	.google-map(onMouseLeave="document.querySelector('.google-map__overlay').style.pointerEvents=''")
-		.google-map__overlay(onClick="style.pointerEvents='none'")
-		iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d39900487.71448589!2d40.60944223142707!3d52.382522441872524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1482606480304" width="100%" height="375" frameborder="0" style="border:0" allowfullscreen)
+	// ====== main content ======= 
+	.content
+		._container
+			._row
+				// ====== aside ======= 
+				aside.sidebar
+					.sidebar__title каталог товаров
+
+					ul.sidebar__list
+						li.sidebar__item
+							a.sidebar__link(href="#") Собаки
+
+						li.sidebar__item.sidebar__item_parent
+							a.sidebar__link(href="#") Кошки
+								+symbol('arrow','icon')
+							ul.sidebar__list
+								li.sidebar__item.sidebar__item_parent
+									a.sidebar__link(href="#") Корм сухой
+										+symbol('arrow','icon')
+									ul.sidebar__list
+										li.sidebar__item
+											a.sidebar__link(href="#") Корм очень сухой
+										li.sidebar__item
+											a.sidebar__link(href="#") Корм средней сухости
+										li.sidebar__item
+											a.sidebar__link(href="#") Корм не сухой
+								li.sidebar__item
+									a.sidebar__link(href="#") Корм консервированный
+								li.sidebar__item
+									a.sidebar__link(href="#") Заменители молока
+								li.sidebar__item
+									a.sidebar__link(href="#") Гигиенические наполнители
+								li.sidebar__item
+									a.sidebar__link(href="#") Витамины, минералы
+								li.sidebar__item
+									a.sidebar__link(href="#") Лакомства
+								li.sidebar__item
+									a.sidebar__link(href="#") Игрушки
+								li.sidebar__item
+									a.sidebar__link(href="#") Когтеточки
+								li.sidebar__item
+									a.sidebar__link(href="#") Места
+								li.sidebar__item
+									a.sidebar__link(href="#") Переноски, сумки
+								li.sidebar__item
+									a.sidebar__link(href="#") Расчески, щетки, пуходерки
+								li.sidebar__item
+									a.sidebar__link(href="#") Миски, поилки и кормушки
+								li.sidebar__item
+									a.sidebar__link(href="#") Намордники
+								li.sidebar__item
+									a.sidebar__link(href="#") Шампуни
+								li.sidebar__item
+									a.sidebar__link(href="#") Косметика и средства гигиены
+								li.sidebar__item
+									a.sidebar__link(href="#") Средства для дома
+
+						li.sidebar__item
+							a.sidebar__link(href="#") Аквариумистика
+
+						li.sidebar__item
+							a.sidebar__link(href="#") Птицы
+
+						li.sidebar__item
+							a.sidebar__link(href="#") Грызуны
+
+						li.sidebar__item
+							a.sidebar__link(href="#") Фретки
+
+						li.sidebar__item
+							a.sidebar__link(href="#") Рептилии
+
+						li.sidebar__item
+							a.sidebar__link(href="#") Пруд
+
+						li.sidebar__item
+							a.sidebar__link(href="#") Лошади
+
+					.sidebar__banner
+						p
+							img(src="img/banners/banner_1.jpg", alt="")
+					
+					.sidebar__banner
+						p
+							img(src="img/banners/banner_2.jpg", alt="")
+
+
+				// ====== main ======= 
+				main.main
+					._row.products
+						.product-mini
+							a.product-mini__img-holder(href="#")
+								img.product-mini__img(src="img/products/product_1.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="#")
+								img.product-mini__img(src="img/products/product_1.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="#")
+								img.product-mini__img(src="img/products/product_1.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="#")
+								img.product-mini__img(src="img/products/product_1.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="#")
+								img.product-mini__img(src="img/products/product_1.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="#")
+								img.product-mini__img(src="img/products/product_1.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+
+						.product-mini
+							a.product-mini__img-holder(href="#")
+								img.product-mini__img(src="img/products/product_1.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+
+					.btn-holder
+						button.button.product-mini__more
+							svg.icon
+								use(xlink:href="#reload")
+							span Больше товаров
+
+
+

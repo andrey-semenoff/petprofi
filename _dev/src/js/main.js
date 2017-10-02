@@ -6,23 +6,19 @@ $(function () {
   Smooth_Scroll.init();
   
   // owl-carousel init
-  $(".owl-carousel[data-type='common']").owlCarousel({
-  	items: 4,
+  $(".owl-carousel[data-type='main']").owlCarousel({
+  	items: 3,
   	loop: true,
   	smartSpeed: 1000,
-  	autoHeight: true,
+  	// autoHeight: true,
   	nav: true,
   	navText: [
-  		"<span class='fa fa-chevron-left fa-2x owl-nav_arrow'></span>",
-  		"<span class='fa fa-chevron-right fa-2x owl-nav_arrow'></span>"
+  		"<svg class='icon'><use xlink:href='#arrow'></use></svg>",
+  		"<svg class='icon'><use xlink:href='#arrow'></use></svg>"
   	],
   	responsive: {
   		992: {
-        items: 4,
-      },
-      
-      768: {
-      	items: 3,
+        items: 3,
       },
       
       550: {
@@ -32,8 +28,39 @@ $(function () {
       0: {
       	items: 1,
       }
-  	}
+  	},
+
+    onInitialized: enlargeImage,
+    onTranslated: enlargeImage,
+    onTranslate: reduceImage,
+    onDrag: reduceImage,
+
+
   });
+
+
+
+  // wrap|unwrap list
+  $('.sidebar__item_parent .icon').click(function(e) {
+    e.preventDefault();
+    $(this).parent().siblings('.sidebar__list').slideToggle();
+  });
+
+  // next script
 });
+
+function enlargeImage() {
+  $(".owl-item.active").eq(1).css({
+    'z-index': 99999,
+    'transform': 'scale(1.4)'
+  })
+}
+
+function reduceImage() {
+  $(".owl-item.active").css({
+    'z-index': -1,
+    'transform': 'scale(1)'
+  })
+}
 
 

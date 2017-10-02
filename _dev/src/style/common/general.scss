@@ -88,7 +88,6 @@ input, button {
 ._container {
   max-width: $container-width;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 ._row {
@@ -99,8 +98,9 @@ input, button {
 /*! --- icons --- */
 .icon {
   display: inline-block;
-  background-image: url(../img/spriteIcons.png);
+  // background-image: url(../img/spriteIcons.png);
   vertical-align: middle;
+  transition: all 0.5s ;
 }
 
 // @include icons($icons-sprites);
@@ -115,6 +115,10 @@ input, button {
   &:hover {
     cursor: pointer;
   }
+}
+
+.btn-holder {
+  text-align: center;
 }
 
 /*! --- standart title --- */
@@ -144,9 +148,9 @@ input, button {
 /*! --- owl-carousel --- */
 
 .owl-carousel {
-  max-width: 925px;
-  width: 85%;
-  margin: 0 auto;
+  // max-width: 925px;
+  // width: 85%;
+  // margin: 0 auto;
   margin-top: 65px;
 
   @include media(500) {
@@ -159,6 +163,15 @@ input, button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  height: 100%;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px;
+    fill: $pink;
+  }
 }
 
 .owl-prev {
@@ -166,6 +179,10 @@ input, button {
 
   @include media(500) {
     left: -9%;
+  }
+
+  .icon {
+    transform: rotate(180deg);
   }
 }
 
@@ -186,17 +203,10 @@ input, button {
   // height: 46px;
 }
 
-/*! --- google-map --- */
-
-.google-map {
-  position: relative;
+.owl-carousel[data-type='main'] .owl-stage-outer {
+  overflow: visible;
 }
 
-.google-map__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.owl-item.active {
+  transition: all 0.5s;
 }
-
