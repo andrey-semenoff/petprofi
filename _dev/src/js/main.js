@@ -2,10 +2,10 @@
 
 $(function () {
 
-  // Инициализация скрипта
+  // Инициализация скрипта плавный сколл
   Smooth_Scroll.init();
   
-  // owl-carousel init
+  // owl-carousel on main page
   $(".owl-carousel[data-type='main']").owlCarousel({
   	items: 3,
   	loop: true,
@@ -21,7 +21,7 @@ $(function () {
         items: 3,
       },
       
-      550: {
+      640: {
       	items: 2,
       },
 
@@ -34,13 +34,14 @@ $(function () {
     onTranslated: enlargeImage,
     onTranslate: reduceImage,
     onDrag: reduceImage,
-
-
+    onResize: function() {
+      reduceImage();
+      enlargeImage();
+    }
   });
 
 
-
-  // wrap|unwrap list
+  // wrap|unwrap list categories
   $('.sidebar__item_parent .icon').click(function(e) {
     e.preventDefault();
     $(this).parent().siblings('.sidebar__list').slideToggle();
@@ -48,19 +49,23 @@ $(function () {
 
   // next script
 });
+// END DOCUMENT ONLOAD SCRIPTS
 
+/////////////////////
+// START FUNCTIONS
+/////////////////////
+
+// animate center image in carousel
 function enlargeImage() {
-  $(".owl-item.active").eq(1).css({
-    'z-index': 99999,
-    'transform': 'scale(1.4)'
-  })
+  if( $(window).width() > 992 ) {
+    $(".owl-item.active").eq(1).addClass('owl-item_enlarged');
+  }
 }
 
 function reduceImage() {
-  $(".owl-item.active").css({
-    'z-index': -1,
-    'transform': 'scale(1)'
-  })
+  $(".owl-item.active").removeClass('owl-item_enlarged');
 }
 
+// next function
 
+// END FUNCTIONS
