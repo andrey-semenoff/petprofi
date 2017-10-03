@@ -6,47 +6,47 @@ block content
 		._container
 			ul.categories__list
 				li.categories__item
-					a.categories__link(href="/catalog.html")
+					a.categories__link(href="#")
 						svg.icon
 							use(xlink:href="#animals--dog")
 						span.categories__item-name Cобаки
 				li.categories__item
-					a.categories__link(href="/catalog.html")
+					a.categories__link(href="#")
 						svg.icon
 							use(xlink:href="#animals--cat")
 						span.categories__item-name Кошки
 				li.categories__item
-					a.categories__link(href="/catalog.html")
+					a.categories__link(href="#")
 						svg.icon
 							use(xlink:href="#animals--goldfish")
 						span.categories__item-name Аквариумистика
 				li.categories__item
-					a.categories__link(href="/catalog.html")
+					a.categories__link(href="#")
 						svg.icon
 							use(xlink:href="#animals--bird")
 						span.categories__item-name Птицы
 				li.categories__item
-					a.categories__link(href="/catalog.html")
+					a.categories__link(href="#")
 						svg.icon
 							use(xlink:href="#animals--rodents")
 						span.categories__item-name Грызуны
 				li.categories__item
-					a.categories__link(href="/catalog.html")
+					a.categories__link(href="#")
 						svg.icon
 							use(xlink:href="#animals--trifles")
 						span.categories__item-name Фретки
 				li.categories__item
-					a.categories__link(href="/catalog.html")
+					a.categories__link(href="#")
 						svg.icon
 							use(xlink:href="#animals--reptiles")
 						span.categories__item-name Рептилии
 				li.categories__item
-					a.categories__link(href="/catalog.html")
+					a.categories__link(href="#")
 						svg.icon
 							use(xlink:href="#animals--fish")
 						span.categories__item-name Пруд
 				li.categories__item
-					a.categories__link(href="/catalog.html")
+					a.categories__link(href="#")
 						svg.icon
 							use(xlink:href="#animals--horse")
 						span.categories__item-name Лошади
@@ -142,6 +142,73 @@ block content
 						li.categories__item
 							a.categories__link(href="#") Лошади
 
+
+					.filters
+						.filter
+							.filter__title Бренд
+							ul.filter__list
+								li.filter__item
+									label.filter__label
+										span.filter__label-text
+											+symbol('','icon')
+											span.filter__label-name Cath Kidston
+										input.filter__input(type="checkbox" name="filters[]")
+								li.filter__item
+									label.filter__label
+										span.filter__label-text
+											+symbol('','icon')
+											span.filter__label-name Cheap Monday
+										input.filter__input(type="checkbox" name="filters[]")
+								li.filter__item
+									label.filter__label
+										span.filter__label-text
+											+symbol('','icon')
+											span.filter__label-name Codello
+										input.filter__input(type="checkbox" name="filters[]")
+								li.filter__item
+									label.filter__label
+										span.filter__label-text
+											+symbol('','icon')
+											span.filter__label-name Comme Des F. Down
+										input.filter__input(type="checkbox" name="filters[]")
+						.filter
+							.filter__title Вес
+							ul.filter__list
+								li.filter__item
+									label.filter__label
+										span.filter__label-text
+											+symbol('','icon')
+											span.filter__label-name 1 - 2 кг
+										input.filter__input(type="checkbox" name="filters[]")
+								li.filter__item
+									label.filter__label
+										span.filter__label-text
+											+symbol('','icon')
+											span.filter__label-name 2 - 6 кг
+										input.filter__input(type="checkbox" name="filters[]")
+								li.filter__item
+									label.filter__label
+										span.filter__label-text
+											+symbol('','icon')
+											span.filter__label-name 7 - 12 кг
+										input.filter__input(type="checkbox" name="filters[]")
+								li.filter__item
+									label.filter__label
+										span.filter__label-text
+											+symbol('','icon')
+											span.filter__label-name более 12 кг
+										input.filter__input(type="checkbox" name="filters[]")
+						.filter
+							.filter__title Цена
+							.filter-prices
+								span.filter-prices__text от
+								input.filter-prices__input(type="number" name="price_from" min="0")
+								span.filter-prices__text до
+								input.filter-prices__input(type="number" name="price_to" min="1")
+								span.filter-prices__text грн
+								button.button.filter-prices__button OK
+
+
 					.sidebar__banner
 						p
 							img(src="img/banners/banner_1.jpg", alt="")
@@ -153,61 +220,37 @@ block content
 
 				// ====== main ======= 
 				main.main
-					._row.products
-						.product-mini
-							a.product-mini__img-holder(href="#")
-								img.product-mini__img(src="img/products/product_1.jpg", alt="")
-							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
-							.product-mini__price 150 грн
-							button.button.product-mini__button В корзину
-							
-						.product-mini
-							a.product-mini__img-holder(href="#")
-								img.product-mini__img(src="img/products/product_1.jpg", alt="")
-							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
-							.product-mini__price 150 грн
-							button.button.product-mini__button В корзину
-							
-						.product-mini
-							a.product-mini__img-holder(href="#")
-								img.product-mini__img(src="img/products/product_1.jpg", alt="")
-							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
-							.product-mini__price 150 грн
-							button.button.product-mini__button В корзину
-							
-						.product-mini
-							a.product-mini__img-holder(href="#")
-								img.product-mini__img(src="img/products/product_1.jpg", alt="")
-							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
-							.product-mini__price 150 грн
-							button.button.product-mini__button В корзину
-							
-						.product-mini
-							a.product-mini__img-holder(href="#")
-								img.product-mini__img(src="img/products/product_1.jpg", alt="")
-							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
-							.product-mini__price 150 грн
-							button.button.product-mini__button В корзину
-							
-						.product-mini
-							a.product-mini__img-holder(href="#")
-								img.product-mini__img(src="img/products/product_1.jpg", alt="")
-							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
-							.product-mini__price 150 грн
-							button.button.product-mini__button В корзину
+					.breadcrumbs
+						ul.breadcrumbs__list
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/") Главная
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/catalog.html") Собаки 
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/catalog.html") Сухой корм для собак
+							li.breadcrumbs__item.breadcrumbs__item_active
+								span.breadcrumbs__link Arden Grange
 
-						.product-mini
-							a.product-mini__img-holder(href="#")
-								img.product-mini__img(src="img/products/product_1.jpg", alt="")
-							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
-							.product-mini__price 150 грн
-							button.button.product-mini__button В корзину
+					.catalog
+						._row.catalog__header
+							.catalog__title arden grange
+							.catalog__params
+								.catalog__paging
+									span Показать на странице:
+									a.catalog__paging-link(href="#") 30
+									a.catalog__paging-link(href="#") 50
+									a.catalog__paging-link(href="#") все
+								.catalog__view
+									a.catalog__view-link(href="#")
+										+symbol('view_dots', 'icon')
+									a.catalog__view-link(href="#")
+										+symbol('view_bars', 'icon')
 
-					.btn-holder
-						button.button.product-mini__more
-							svg.icon
-								use(xlink:href="#reload")
-							span Больше товаров
-
-
+						._row.catalog__products
+							.product-mini
+								a.product-mini__img-holder(href="#")
+									img.product-mini__img(src="img/products/product_1.jpg", alt="")
+								a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+								.product-mini__price 150 грн
+								button.button.product-mini__button В корзину
 

@@ -1,0 +1,180 @@
+
+
+/*! ===== filters ===== */
+.filter {
+	margin-top: 20px;
+	border-top: 2px solid $pink;
+	color: #444;
+}
+
+.filter__title {
+	margin-top: 20px;
+	font: 18px $OpenSans-Bold;
+}
+
+.filter__item {
+  margin-top: 15px;
+  
+  &_active, &:hover {
+    color: $lazure;
+  }
+
+ .icon {
+  	width: 20px;
+  	height: 20px;
+  	padding: 2px;
+  	border: 2px solid #dbdbdb;
+  	border-radius: 5px;
+  	fill: $lazure;
+  }
+
+	&_active .icon {
+		border-color: $lazure;
+	}
+}
+
+.filter__label {
+  display: block;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.filter__label-text {
+  display: block;
+}
+
+.filter__label-name {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.filter__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.filter-prices__text {
+	margin-left: 5px;
+}
+
+.filter-prices__input {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	border: 2px solid #dbdbdb;
+	border-radius: 5px;
+	padding: 0 5px;
+}
+
+.filter-prices__button {
+	width: 50px;
+	height: 30px;
+	line-height: 20px;
+	border-radius: 5px;
+	background-color: $lazure;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+
+	&:hover {
+		cursor: pointer;
+		background-color: darken($lazure, 10%);
+	}
+}
+
+
+/*! ===== breadcrumbs ===== */
+.breadcrumbs {
+
+}
+
+.breadcrumbs__list {
+	font-size: 0;
+}
+
+.breadcrumbs__item {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	padding-left: 15px;
+	font-size: 16px;
+
+	&:not(:first-child):after {
+		content: '>';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		color: #444;
+	}
+
+
+	&_active .breadcrumbs__link {
+		color: #444;
+	}
+}
+
+.breadcrumbs__link {
+	display: inline-block;
+	vertical-align: middle;
+	color: $lazure;
+}
+
+
+/*! ===== catalog ===== */
+.catalog {
+
+}
+
+.catalog__header {
+	font: 25px $OpenSans-Bold;
+	color: #444;
+}
+
+.catalog__title {
+	float: left;
+	margin-top: 25px;
+}
+
+.catalog__params {
+	float: right;
+	margin-top: 25px;
+}
+
+.catalog__paging {
+	display: inline-block;
+	vertical-align: middle;
+
+	span {
+
+	}
+}
+
+.catalog__paging-link {
+	
+}
+
+.catalog__view {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.catalog__view-link {
+
+	.icon {
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.catalog__products {
+	margin-top: 40px;
+}

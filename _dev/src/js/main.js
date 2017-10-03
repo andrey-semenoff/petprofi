@@ -42,9 +42,21 @@ $(function () {
 
 
   // wrap|unwrap list categories
-  $('.sidebar__item_parent .icon').click(function(e) {
+  $('.categories__item_parent .icon').click(function(e) {
     e.preventDefault();
-    $(this).parent().siblings('.sidebar__list').slideToggle();
+    $(this).parent().siblings('.categories__list').slideToggle();
+  });
+
+  // check on checkboxes
+  var $filter__input = $(".filter__input");
+  if($filter__input.length > 0) {
+    $filter__input.each(function(){
+      checkFilters($(this));
+    });
+  }
+
+  $(".filter__input").on("change", function (e) {
+    checkFilters($(this));
   });
 
   // next script
@@ -64,6 +76,20 @@ function enlargeImage() {
 
 function reduceImage() {
   $(".owl-item.active").removeClass('owl-item_enlarged');
+}
+
+function checkFilters($this) {
+  var checked = $this.is(':checked'),
+  $item = $this.parents("label"),
+  $icon = $item.find(".icon");
+
+  if( checked ) {
+    $item.addClass("filter__item_active");
+    $icon.children().attr('xlink:href', '#check')
+  } else {
+    $item.removeClass("filter__item_active");
+    $icon.children().attr('xlink:href', '');
+  }
 }
 
 // next function
