@@ -60,6 +60,10 @@
   z-index: -1;
 }
 
+.filter-prices {
+	margin-top: 15px;
+}
+
 .filter-prices__text {
 	margin-left: 5px;
 }
@@ -103,19 +107,21 @@
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	margin-left: 5px;
-	padding-left: 15px;
 	font-size: 16px;
 
-	&:not(:first-child):after {
-		content: '>';
-		position: absolute;
-		top: 50%;
-		left: 0;
-		transform: translateY(-50%);
-		color: #444;
-	}
+	&:not(:first-child) {
+		margin-left: 5px;
+		padding-left: 15px;
 
+		&:after {
+			content: '>';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			color: #444;
+		}
+	}
 
 	&_active .breadcrumbs__link {
 		color: #444;
@@ -135,13 +141,14 @@
 }
 
 .catalog__header {
-	font: 25px $OpenSans-Bold;
 	color: #444;
 }
 
 .catalog__title {
 	float: left;
 	margin-top: 25px;
+	font: 25px $OpenSans-Bold;
+	text-transform: uppercase;
 }
 
 .catalog__params {
@@ -159,22 +166,112 @@
 }
 
 .catalog__paging-link {
-	
+	display: inline-block;
+	margin-left: 10px;
+	color: $lazure;
+	text-decoration: underline;
+
+	&_active {
+		color: #444;
+		text-decoration: none;
+	}
 }
 
 .catalog__view {
 	display: inline-block;
 	vertical-align: middle;
+	margin-left: 45px;
 }
 
 .catalog__view-link {
+	display: inline-block;
+	margin-left: 15px;
+	cursor: pointer;
 
 	.icon {
 		width: 25px;
 		height: 25px;
+		fill: $lazure;
+	}
+
+	&_active {
+		cursor: default;
+		.icon {
+			fill: #444;
+		}
 	}
 }
 
 .catalog__products {
 	margin-top: 40px;
+
+	&_linear {
+		.product-mini {
+			float: none;
+			width: 100%;
+			text-align: left;
+		}
+
+		.product-mini__img-holder {
+			float: left;
+			width: 30%;
+			height: 182px;
+		}
+
+		.product-mini__desc {
+			float: right;
+			width: 70%;
+			padding-left: 30px;
+		}
+
+		.product-mini__body {
+			display: block;
+		}
+
+		.product-mini__price {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+		}
+
+		.product-mini__button {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 0 0 25px;
+		}
+
+
+	}
 }
+
+.product-mini__badge {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 5px 10px;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	color: #fff;
+	font-family: $OpenSans-Semibold;
+	text-transform: uppercase;
+	text-align: center;
+	
+	&_new {
+		background-color: $lazure;
+	}
+
+	&_sale {
+		background-color: $pink;
+	}
+
+	&_top {
+		background-color: orange;
+	}
+
+	&_rec {
+		background-color: green;
+	}
+
+
+}
+

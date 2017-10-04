@@ -142,20 +142,34 @@ aside.sidebar {
 	width: 33.33%;
 	padding: 0 15px;
 	margin-top: 25px;
+	color: #444;
 	text-align: center;
 }
 
 .product-mini__img-holder {
+	position: relative;
 	display: inline-block;
 	width: 100%;
+	height: 340px;
+	padding: 5px;
 	overflow: hidden;
 	box-shadow: 0 0 2px 0 rgba(#000, 0.1);
+	transition: all 0.5s;
+
+	&:hover {
+		box-shadow: inset 0 0 15px rgba($lazure, 0.5);
+	}
 }
 
 .product-mini__img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
+}
+
+.product-mini__body {
+	display: none;
+	margin: 15px 0;
 }
 
 .product-mini__title {
@@ -163,6 +177,10 @@ aside.sidebar {
 	margin-top: 15px;
 	font-family: $OpenSans-Semibold;
 	color: #444;
+
+	&:hover {
+		color: $lazure;
+	}
 }
 
 .product-mini__price {

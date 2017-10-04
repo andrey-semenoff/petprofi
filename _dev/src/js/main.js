@@ -59,6 +59,24 @@ $(function () {
     checkFilters($(this));
   });
 
+  // change catalog view
+  $('.catalog__view-link').click(function(e) {
+    var $this = $(this),
+        view = $this.data('view'),
+        $catalog__products = $('.catalog__products');
+
+    if( !$this.hasClass('catalog__view-link_active') ) {
+      $this.siblings().removeClass('catalog__view-link_active');
+      $this.addClass('catalog__view-link_active');
+
+      if( view == 'linear' ) {
+        $catalog__products.addClass('catalog__products_linear');
+      } else {
+        $catalog__products.removeClass('catalog__products_linear');
+      }
+    }
+  });
+
   // next script
 });
 // END DOCUMENT ONLOAD SCRIPTS
