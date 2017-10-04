@@ -58,7 +58,8 @@ module.exports = {
     vendorJS: {
                 src:[
                       './bower_components/jquery/dist/jquery.min.js',
-                      './bower_components/owl.carousel/dist/owl.carousel.min.js'
+                      './bower_components/owl.carousel/dist/owl.carousel.min.js',
+                      './bower_components/jcarousel/dist/jquery.jcarousel.min.js'
                     ],
                 dest: './_build/js/vendor/'
               },

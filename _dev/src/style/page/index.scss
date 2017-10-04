@@ -110,16 +110,23 @@ aside.sidebar {
 	}
 }
 
-.sidebar .categories__link > .icon {
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%) rotate(90deg);
-	width: 15px;
-	height: 15px;
+.categories__list {
 
-	&:hover {
-		fill: $pink;
+	.categories__link > .icon {
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%) rotate(-90deg);
+		width: 15px;
+		height: 15px;
+
+		&:hover {
+			fill: $pink;
+		}
+
+		&_up {
+			transform: translateY(-50%) rotate(90deg);
+		}
 	}
 }
 
@@ -135,6 +142,13 @@ aside.sidebar {
 /*! ===== products mini ===== */
 .products {
 
+}
+
+.products__title {
+	margin-top: 40px;
+	font: 25px $OpenSans-Bold;
+	color: #444;
+	text-transform: uppercase;
 }
 
 .product-mini {

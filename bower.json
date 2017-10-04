@@ -19,6 +19,7 @@
     "normalize-css": "^4.1.1",
     "owl.carousel": "^2.2.0",
     "jquery-modal": "^0.8.0",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "jcarousel": "^0.3.5"
   }
 }

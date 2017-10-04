@@ -112,8 +112,14 @@ input, button {
   display: inline-block;
   transition: all 0.5s;
 
-  &:hover {
+  &:not(:disabled):hover {
     cursor: pointer;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &:focus {
+    outline: none;
   }
 }
 
@@ -243,4 +249,12 @@ input, button {
 .owl-item.active.owl-item_enlarged {
   transform: scale(1.2);
   z-index: 99999;
+}
+
+
+/*! --- jcarousel general styles --- */
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
 }

@@ -1,0 +1,341 @@
+extends ../main
+
+block content
+	// ====== catalog ======= 
+	.categories.categories_top
+		._container
+			ul.categories__list
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--dog")
+						span.categories__item-name Cобаки
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--cat")
+						span.categories__item-name Кошки
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--goldfish")
+						span.categories__item-name Аквариумистика
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--bird")
+						span.categories__item-name Птицы
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--rodents")
+						span.categories__item-name Грызуны
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--trifles")
+						span.categories__item-name Фретки
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--reptiles")
+						span.categories__item-name Рептилии
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--fish")
+						span.categories__item-name Пруд
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--horse")
+						span.categories__item-name Лошади
+
+	// ====== owl-carousel ======= 
+	.carousel-holder
+		.owl-carousel(data-type="main")
+
+			.carousel__item 
+				img(src="img/slider/slide_1.jpg")
+			.carousel__item 
+				img(src="img/slider/slide_2.jpg")
+			.carousel__item 
+				img(src="img/slider/slide_3.jpg")
+			.carousel__item 
+				img(src="img/slider/slide_3.jpg")
+
+	// ====== main content ======= 
+	.content
+		._container
+			._row
+				// ====== aside ======= 
+				aside.sidebar
+					.sidebar__title каталог товаров
+
+					ul.categories__list
+						li.categories__item
+							a.categories__link(href="#") Собаки
+
+						li.categories__item.categories__item_parent
+							a.categories__link(href="#") Кошки
+								+symbol('arrow','icon')
+							ul.categories__list
+								li.categories__item.categories__item_parent
+									a.categories__link(href="#") Корм сухой
+										+symbol('arrow','icon')
+									ul.categories__list
+										li.categories__item
+											a.categories__link(href="#") Корм очень сухой
+										li.categories__item
+											a.categories__link(href="#") Корм средней сухости
+										li.categories__item
+											a.categories__link(href="#") Корм не сухой
+								li.categories__item
+									a.categories__link(href="#") Корм консервированный
+								li.categories__item
+									a.categories__link(href="#") Заменители молока
+								li.categories__item
+									a.categories__link(href="#") Гигиенические наполнители
+								li.categories__item
+									a.categories__link(href="#") Витамины, минералы
+								li.categories__item
+									a.categories__link(href="#") Лакомства
+								li.categories__item
+									a.categories__link(href="#") Игрушки
+								li.categories__item
+									a.categories__link(href="#") Когтеточки
+								li.categories__item
+									a.categories__link(href="#") Места
+								li.categories__item
+									a.categories__link(href="#") Переноски, сумки
+								li.categories__item
+									a.categories__link(href="#") Расчески, щетки, пуходерки
+								li.categories__item
+									a.categories__link(href="#") Миски, поилки и кормушки
+								li.categories__item
+									a.categories__link(href="#") Намордники
+								li.categories__item
+									a.categories__link(href="#") Шампуни
+								li.categories__item
+									a.categories__link(href="#") Косметика и средства гигиены
+								li.categories__item
+									a.categories__link(href="#") Средства для дома
+
+						li.categories__item
+							a.categories__link(href="#") Аквариумистика
+
+						li.categories__item
+							a.categories__link(href="#") Птицы
+
+						li.categories__item
+							a.categories__link(href="#") Грызуны
+
+						li.categories__item
+							a.categories__link(href="#") Фретки
+
+						li.categories__item
+							a.categories__link(href="#") Рептилии
+
+						li.categories__item
+							a.categories__link(href="#") Пруд
+
+						li.categories__item
+							a.categories__link(href="#") Лошади
+
+					// ====== banners ======= 
+					.sidebar__banner
+						p
+							a(href="/")
+								img(src="img/banners/banner_1.jpg", alt="")
+					
+					.sidebar__banner
+						p
+							a(href="/")
+								img(src="img/banners/banner_2.jpg", alt="")
+
+
+				// ====== main ======= 
+				main.main
+					.breadcrumbs
+						ul.breadcrumbs__list
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/") Главная
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/catalog.html") Собаки
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/catalog.html") Сухой корм для собак
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/catalog.html") Hills
+							li.breadcrumbs__item.breadcrumbs__item_active
+								span.breadcrumbs__link Prescription Diet Canine i/d
+
+					.product-in
+						.product-in__name Prescription Diet Canine i/d
+
+						._row.product-in__main
+							._row.product-in__left
+								.product-in__jcarousel-photos
+									.jcarousel
+										ul.product-in__more
+											li.product-in__more-item
+												a.product-in__more-link.product-in__more-link_active(href="#")
+													img.product-in__more-photo(src="img/products/product_1.jpg", alt="")
+											li.product-in__more-item
+												a.product-in__more-link(href="#")
+													img.product-in__more-photo(src="img/products/product_2.jpg", alt="")
+											li.product-in__more-item
+												a.product-in__more-link(href="#")
+													img.product-in__more-photo(src="img/products/product_3.jpg", alt="")
+											li.product-in__more-item
+												a.product-in__more-link(href="#")
+													img.product-in__more-photo(src="img/products/product_4.jpg", alt="")
+									.jcarousel-nav.jcarousel-nav_prev
+										+symbol('arrow','icon')
+									.jcarousel-nav.jcarousel-nav_next
+										+symbol('arrow','icon')
+
+								a.product-in__photo-holder(href="#")
+									img.product-in__photo(src="img/products/product_1.jpg", alt="")
+
+
+							.product-in__right
+								.product-in__status Есть в наличии
+								.product-in__code Код товара: 123123
+
+								form.product-in__form
+									._row.product-in__group
+										label.product-in__label
+											input.product-in__input(type="radio" name="param" checked)
+											span.product-in__label-text
+												.icon
+												span.product-in__price 2 кг за 150 грн
+										.counter
+											button.button.counter__button(type="button" data-type="-") -
+											span.counter__number 1
+											button.button.counter__button(type="button" data-type="+") +
+
+									._row.product-in__group
+										label.product-in__label
+											input.product-in__input(type="radio" name="param")
+											span.product-in__label-text
+												.icon
+												span.product-in__price 6 кг за 240 грн
+										.counter
+											button.button.counter__button(type="button" data-type="-" disabled) -
+											span.counter__number 1
+											button.button.counter__button(type="button" data-type="+" disabled) +
+
+									._row.product-in__group
+										label.product-in__label
+											input.product-in__input(type="radio" name="param")
+											span.product-in__label-text
+												.icon
+												span.product-in__price 12 кг за 400 грн
+										.counter
+											button.button.counter__button(type="button" data-type="-" disabled) -
+											span.counter__number 1
+											button.button.counter__button(type="button" data-type="+" disabled) +
+
+									button.button.product-in__to-basket
+										span В корзину
+
+									a.product-in__to-cart Купить в 1 клик
+
+						.product-in__desc
+							.product-in__desc-group
+								.product-in__desc-group-name
+									span Характеристики:
+									+symbol('arrow', 'icon')
+								.product-in__desc-group-body
+									p Страна производитель: Франция, Польша 
+									p Торговая марка: Royal Canin 
+									p Категория: Сухой корм
+									p Возраст кошки: Взрослые кошки
+									p Класс корма: Супер-премиум
+									p Особые потребности: Кастрированные и стерилизованные
+
+							.product-in__desc-group
+								.product-in__desc-group-name
+									span Описание товара
+									+symbol('arrow', 'icon')
+								.product-in__desc-group-body
+									p ПОКАЗАНИЯ 
+									p Питательные характеристики корма Prescription Diet* Canine i/d* позволяют успешно применять его в следующих случаях: 
+									p 1.Желудочно-кишечные заболевания, включая гастриты, энтериты, а также при выздоровлении после хирургического вмешательства на желудочно-кишечном тракте. 
+									p ЦЕЛИ 
+									p Обеспечить животное высокопереваримым кормом во время восстановления нормальной желудочно-кишечной деятельности и выздоровления после операции. Необходимо кормить в этот период часто, маленькими порциями (3-6 раз в день).Дополнительное введение в корм растворимых пищевых волокон, которые расщепляются в кишечнике до короткоцепочечных жирных кислот и являются источником энергии для колоноцитов, помогает более быстрому восстановлению нормальной микрофлоры кишечника. 
+									p 2.Экзокринная панкреатическая недостаточность. 
+									p ЦЕЛИ 
+									p Обеспечить животное высокопереваримым кормом в связи с пониженной активностью ферментов поджелудочной железы. 
+									p 3.Острый панкреатит без признаков гиперлипидемии. 
+									p ЦЕЛИ 
+									p Обеспечение животного высокоусвояемым кормом (с умеренно пониженным уровнем жира) пригодным для кормления животного после начальной стадии острого панкреатита без гиперлипидемии. Необходимо давать корм часто и мелкими порциями (3-6 раз). 
+									p 4.Вздутие (расширение и заворот желудка). 
+									p ЦЕЛИ 
+									p Обеспечение животного высокоусвояемым кормом при общей сниженной норме потребления. Рекомендуется кормить животное 3-6 раз в день небольшими порциями, избегая волнений и физических нагрузок в течение одного часа до и после еды. 
+
+
+							.product-in__desc-group
+								.product-in__desc-group-name.product-in__desc-group-name_collapsed
+									span Состав
+									+symbol('arrow', 'icon')
+								.product-in__desc-group-body(style="display: none;")
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis labore quaerat sequi officia atque? Hic blanditiis dicta dolore asperiores aspernatur quis, illo earum veritatis, porro, enim doloremque commodi modi dolor?
+
+
+							.product-in__desc-group
+								.product-in__desc-group-name.product-in__desc-group-name_collapsed
+									span Нормы кормления
+									+symbol('arrow', 'icon')
+								.product-in__desc-group-body(style="display: none;")
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, minus.
+
+
+					._row.products
+						.products__title похожие товары
+						 							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_3.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_4.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_5.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+
+
+					._row.products
+						.products__title с этим товаром также покупают
+
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_6.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_7.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_8.jpg", alt="")
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину

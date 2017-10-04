@@ -1,0 +1,313 @@
+
+
+/*! ===== product-in ===== */
+.product-in {
+	margin-top: 25px;
+	color: #444;
+}
+
+.product-in__name {
+	font: 25px $OpenSans-Bold;
+	text-transform: uppercase;
+}
+
+
+.product-in__main {
+	margin-top: 25px;
+}
+
+.product-in__left {
+	float: left;
+	width: 45%;
+}
+
+.product-in__jcarousel-photos {
+	float: left;
+	position: relative;
+	padding: 25px 0;
+
+	.jcarousel {
+		width: 75px;
+		height: 280px;
+	}
+
+	.jcarousel-nav {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		text-align: center;
+		font-size: 0;
+
+		&:hover {
+			cursor: pointer;
+
+			.icon {
+				fill: $lazure;
+			}
+		}
+
+		.icon {
+			width: 15px;
+			height: 25px;
+		}
+	}
+
+	.jcarousel-nav_prev {
+		top: 0;
+		.icon {
+			transform: rotate(-90deg);
+		}
+	}
+	
+	.jcarousel-nav_next {
+		bottom: 0;
+		.icon {
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.product-in__more {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    height: 20000em;
+    margin: 0;
+    padding: 0;
+}
+
+.product-in__more-item {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.product-in__more-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+  padding: 5px;
+  border: 1px solid rgba(#444, 0.1);
+
+
+  &:hover, &_active {
+  	box-shadow: inset 0 0 10px $lazure;
+  }
+}
+
+.product-in__more-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.product-in__photo-holder {
+	float: right;
+	width: 70%;
+	height: 320px;
+	overflow: hidden;
+}
+
+.product-in__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.product-in__right {
+	float: right;
+	width: 55%;
+	padding-left: 100px;
+}
+
+.product-in__status {
+	font-size: 18px;
+	color: $lazure;
+}
+
+.product-in__code {
+	margin-top: 10px;
+	color: #777;
+}
+
+
+.product-in__form {
+	max-width: 315px;
+}
+
+.product-in__group {
+	margin-top: 20px;
+
+ .icon {
+ 		position: relative;
+  	width: 20px;
+  	height: 20px;
+  	padding: 2px;
+  	border: 2px solid #dbdbdb;
+  	border-radius: 50%;
+  	fill: $lazure;
+
+  	&:after {
+  		opacity: 0;
+  		content: '';
+  		position: absolute;
+  		@include center-translate();
+  		width: 10px;
+  		height: 10px;
+  		border-radius: 50%;
+  		background-color: $lazure;
+  		transition: 0.5s all 0.1s;
+  	}
+  }
+
+	&_active .icon {
+		border-color: $lazure;
+	}
+}
+
+.product-in__label {
+  float: left;
+
+  &:hover {
+    cursor: pointer;
+    color: $lazure;
+  }
+}
+
+.product-in__label-text {
+	display: inline-block;
+}
+
+.icon {
+
+}
+
+.product-in__price {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	font: 20px $OpenSans-Semibold;
+}
+
+.product-in__input {
+	@extend .filter__input;
+
+	&:checked ~ .product-in__label-text .icon {
+		border-color: $lazure;
+
+		&:after {
+			opacity: 1;
+		}
+	}
+}
+
+.counter {
+	float: right;
+}
+
+.button.counter__button {
+	width: 30px;
+	height: 25px;
+	border: 2px solid #dbdbdb;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #666;
+
+	&:not(:disabled):hover {
+		border-color: $lazure;
+		background-color: $lazure;
+		color: #fff;
+	}
+
+	&:disabled, &:disabled ~ span {
+		color: #ccc;
+	}
+}
+
+.counter__number {
+	display: inline-block;
+	min-width: 35px;
+	padding: 0 6px 0 10px;
+	text-align: center;
+}
+
+.product-in__to-basket {
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: 25px 0;
+	background-color: #fff;
+	border: 2px solid $pink;
+	border-radius: 50px;
+	font: 18px $OpenSans-Semibold;
+	color: $pink;
+	line-height: 40px;
+
+	&:hover {
+		background-color: $pink;
+		color: #fff;
+	}
+}
+
+.product-in__to-cart {
+	display: inline-block;
+	width: 200px;
+	font: 18px $OpenSans-Semibold;
+	color: $lazure;
+	text-decoration: underline;
+	text-align: center;
+}
+
+
+.product-in__desc {
+	margin-top: 50px;
+}
+
+.product-in__desc-group-name {
+	position: relative;
+	display: inline-block;
+	min-width: 300px;
+	margin: 30px 0 10px;
+	font: 18px $OpenSans-Semibold;
+	color: $lazure;
+
+	.icon {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%) rotate(-90deg);
+		width: 10px;
+		height: 15px;
+		fill: $lazure;
+	}
+
+	&:hover {
+		color: $lazure;
+		cursor: pointer;
+	
+		.icon {
+			fill: $lazure;
+		}
+	}
+
+	&_collapsed {
+		color: inherit;
+
+		.icon {
+			fill: inherit;
+			transform: translateY(-50%) rotate(0deg);
+		}
+	}
+
+}
+
+.product-in__desc-group-body {
+	p {
+		margin: 5px 0;
+	}
+}
