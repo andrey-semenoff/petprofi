@@ -1,158 +1,19 @@
 extends ../main
 
 block content
-	// ====== catalog ======= 
-	.categories.categories_top
-		._container
-			ul.categories__list
-				li.categories__item
-					a.categories__link(href="/catalog.html")
-						svg.icon
-							use(xlink:href="#animals--dog")
-						span.categories__item-name Cобаки
-				li.categories__item
-					a.categories__link(href="/catalog.html")
-						svg.icon
-							use(xlink:href="#animals--cat")
-						span.categories__item-name Кошки
-				li.categories__item
-					a.categories__link(href="/catalog.html")
-						svg.icon
-							use(xlink:href="#animals--goldfish")
-						span.categories__item-name Аквариумистика
-				li.categories__item
-					a.categories__link(href="/catalog.html")
-						svg.icon
-							use(xlink:href="#animals--bird")
-						span.categories__item-name Птицы
-				li.categories__item
-					a.categories__link(href="/catalog.html")
-						svg.icon
-							use(xlink:href="#animals--rodents")
-						span.categories__item-name Грызуны
-				li.categories__item
-					a.categories__link(href="/catalog.html")
-						svg.icon
-							use(xlink:href="#animals--trifles")
-						span.categories__item-name Фретки
-				li.categories__item
-					a.categories__link(href="/catalog.html")
-						svg.icon
-							use(xlink:href="#animals--reptiles")
-						span.categories__item-name Рептилии
-				li.categories__item
-					a.categories__link(href="/catalog.html")
-						svg.icon
-							use(xlink:href="#animals--fish")
-						span.categories__item-name Пруд
-				li.categories__item
-					a.categories__link(href="/catalog.html")
-						svg.icon
-							use(xlink:href="#animals--horse")
-						span.categories__item-name Лошади
+	include ../section/categories
 
-	// ====== owl-carousel ======= 
-	.carousel-holder
-		.owl-carousel(data-type="main")
+	include ../section/carousel
 
-			.carousel__item 
-				img(src="img/slider/slide_1.jpg")
-			.carousel__item 
-				img(src="img/slider/slide_2.jpg")
-			.carousel__item 
-				img(src="img/slider/slide_3.jpg")
-			.carousel__item 
-				img(src="img/slider/slide_3.jpg")
 
 	// ====== main content ======= 
 	.content
 		._container
 			._row
-				// ====== aside ======= 
-				aside.sidebar
-					.sidebar__title каталог товаров
+				
+				include ../section/aside
 
-					ul.categories__list
-						li.categories__item
-							a.categories__link(href="#") Собаки
-
-						li.categories__item.categories__item_parent
-							a.categories__link(href="#") Кошки
-								+symbol('arrow','icon')
-							ul.categories__list
-								li.categories__item.categories__item_parent
-									a.categories__link(href="#") Корм сухой
-										+symbol('arrow','icon')
-									ul.categories__list
-										li.categories__item
-											a.categories__link(href="#") Корм очень сухой
-										li.categories__item
-											a.categories__link(href="#") Корм средней сухости
-										li.categories__item
-											a.categories__link(href="#") Корм не сухой
-								li.categories__item
-									a.categories__link(href="#") Корм консервированный
-								li.categories__item
-									a.categories__link(href="#") Заменители молока
-								li.categories__item
-									a.categories__link(href="#") Гигиенические наполнители
-								li.categories__item
-									a.categories__link(href="#") Витамины, минералы
-								li.categories__item
-									a.categories__link(href="#") Лакомства
-								li.categories__item
-									a.categories__link(href="#") Игрушки
-								li.categories__item
-									a.categories__link(href="#") Когтеточки
-								li.categories__item
-									a.categories__link(href="#") Места
-								li.categories__item
-									a.categories__link(href="#") Переноски, сумки
-								li.categories__item
-									a.categories__link(href="#") Расчески, щетки, пуходерки
-								li.categories__item
-									a.categories__link(href="#") Миски, поилки и кормушки
-								li.categories__item
-									a.categories__link(href="#") Намордники
-								li.categories__item
-									a.categories__link(href="#") Шампуни
-								li.categories__item
-									a.categories__link(href="#") Косметика и средства гигиены
-								li.categories__item
-									a.categories__link(href="#") Средства для дома
-
-						li.categories__item
-							a.categories__link(href="#") Аквариумистика
-
-						li.categories__item
-							a.categories__link(href="#") Птицы
-
-						li.categories__item
-							a.categories__link(href="#") Грызуны
-
-						li.categories__item
-							a.categories__link(href="#") Фретки
-
-						li.categories__item
-							a.categories__link(href="#") Рептилии
-
-						li.categories__item
-							a.categories__link(href="#") Пруд
-
-						li.categories__item
-							a.categories__link(href="#") Лошади
-
-					// ====== banners ======= 
-					.sidebar__banner
-						p
-							a(href="/")
-								img(src="img/banners/banner_1.jpg", alt="")
-					
-					.sidebar__banner
-						p
-							a(href="/")
-								img(src="img/banners/banner_2.jpg", alt="")
-
+					include ../section/banners
 
 				// ====== main ======= 
 				main.main
@@ -182,3 +43,4 @@ block content
 						p Стоимость доставки по Киевской области составляет 35 гривен.
 						p Стоимость доставки товаров из раздела Бытовая техника и интерьер по Киевской области рассчитывается индивидуально.
 
+	include ../section/contacts

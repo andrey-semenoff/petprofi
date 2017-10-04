@@ -1,224 +1,20 @@
 extends ../main
 
 block content
-	// ====== catalog ======= 
-	.categories.categories_top
-		._container
-			ul.categories__list
-				li.categories__item
-					a.categories__link(href="#")
-						svg.icon
-							use(xlink:href="#animals--dog")
-						span.categories__item-name Cобаки
-				li.categories__item
-					a.categories__link(href="#")
-						svg.icon
-							use(xlink:href="#animals--cat")
-						span.categories__item-name Кошки
-				li.categories__item
-					a.categories__link(href="#")
-						svg.icon
-							use(xlink:href="#animals--goldfish")
-						span.categories__item-name Аквариумистика
-				li.categories__item
-					a.categories__link(href="#")
-						svg.icon
-							use(xlink:href="#animals--bird")
-						span.categories__item-name Птицы
-				li.categories__item
-					a.categories__link(href="#")
-						svg.icon
-							use(xlink:href="#animals--rodents")
-						span.categories__item-name Грызуны
-				li.categories__item
-					a.categories__link(href="#")
-						svg.icon
-							use(xlink:href="#animals--trifles")
-						span.categories__item-name Фретки
-				li.categories__item
-					a.categories__link(href="#")
-						svg.icon
-							use(xlink:href="#animals--reptiles")
-						span.categories__item-name Рептилии
-				li.categories__item
-					a.categories__link(href="#")
-						svg.icon
-							use(xlink:href="#animals--fish")
-						span.categories__item-name Пруд
-				li.categories__item
-					a.categories__link(href="#")
-						svg.icon
-							use(xlink:href="#animals--horse")
-						span.categories__item-name Лошади
-
-	// ====== owl-carousel ======= 
-	.carousel-holder
-		.owl-carousel(data-type="main")
-
-			.carousel__item 
-				img(src="img/slider/slide_1.jpg")
-			.carousel__item 
-				img(src="img/slider/slide_2.jpg")
-			.carousel__item 
-				img(src="img/slider/slide_3.jpg")
-			.carousel__item 
-				img(src="img/slider/slide_3.jpg")
+	include ../section/categories
+	
+	include ../section/carousel
 
 	// ====== main content ======= 
 	.content
 		._container
 			._row
-				// ====== aside ======= 
-				aside.sidebar
-					.sidebar__title каталог товаров
+				
+				include ../section/aside
 
-					ul.categories__list
-						li.categories__item
-							a.categories__link(href="#") Собаки
-
-						li.categories__item.categories__item_parent
-							a.categories__link(href="#") Кошки
-								+symbol('arrow','icon')
-							ul.categories__list
-								li.categories__item.categories__item_parent
-									a.categories__link(href="#") Корм сухой
-										+symbol('arrow','icon')
-									ul.categories__list
-										li.categories__item
-											a.categories__link(href="#") Корм очень сухой
-										li.categories__item
-											a.categories__link(href="#") Корм средней сухости
-										li.categories__item
-											a.categories__link(href="#") Корм не сухой
-								li.categories__item
-									a.categories__link(href="#") Корм консервированный
-								li.categories__item
-									a.categories__link(href="#") Заменители молока
-								li.categories__item
-									a.categories__link(href="#") Гигиенические наполнители
-								li.categories__item
-									a.categories__link(href="#") Витамины, минералы
-								li.categories__item
-									a.categories__link(href="#") Лакомства
-								li.categories__item
-									a.categories__link(href="#") Игрушки
-								li.categories__item
-									a.categories__link(href="#") Когтеточки
-								li.categories__item
-									a.categories__link(href="#") Места
-								li.categories__item
-									a.categories__link(href="#") Переноски, сумки
-								li.categories__item
-									a.categories__link(href="#") Расчески, щетки, пуходерки
-								li.categories__item
-									a.categories__link(href="#") Миски, поилки и кормушки
-								li.categories__item
-									a.categories__link(href="#") Намордники
-								li.categories__item
-									a.categories__link(href="#") Шампуни
-								li.categories__item
-									a.categories__link(href="#") Косметика и средства гигиены
-								li.categories__item
-									a.categories__link(href="#") Средства для дома
-
-						li.categories__item
-							a.categories__link(href="#") Аквариумистика
-
-						li.categories__item
-							a.categories__link(href="#") Птицы
-
-						li.categories__item
-							a.categories__link(href="#") Грызуны
-
-						li.categories__item
-							a.categories__link(href="#") Фретки
-
-						li.categories__item
-							a.categories__link(href="#") Рептилии
-
-						li.categories__item
-							a.categories__link(href="#") Пруд
-
-						li.categories__item
-							a.categories__link(href="#") Лошади
-
-
-					.filters
-						.filter
-							.filter__title Бренд
-							ul.filter__list
-								li.filter__item
-									label.filter__label
-										span.filter__label-text
-											+symbol('','icon')
-											span.filter__label-name Cath Kidston
-										input.filter__input(type="checkbox" name="filters[]")
-								li.filter__item
-									label.filter__label
-										span.filter__label-text
-											+symbol('','icon')
-											span.filter__label-name Cheap Monday
-										input.filter__input(type="checkbox" name="filters[]")
-								li.filter__item
-									label.filter__label
-										span.filter__label-text
-											+symbol('','icon')
-											span.filter__label-name Codello
-										input.filter__input(type="checkbox" name="filters[]")
-								li.filter__item
-									label.filter__label
-										span.filter__label-text
-											+symbol('','icon')
-											span.filter__label-name Comme Des F. Down
-										input.filter__input(type="checkbox" name="filters[]")
-						.filter
-							.filter__title Вес
-							ul.filter__list
-								li.filter__item
-									label.filter__label
-										span.filter__label-text
-											+symbol('','icon')
-											span.filter__label-name 1 - 2 кг
-										input.filter__input(type="checkbox" name="filters[]")
-								li.filter__item
-									label.filter__label
-										span.filter__label-text
-											+symbol('','icon')
-											span.filter__label-name 2 - 6 кг
-										input.filter__input(type="checkbox" name="filters[]")
-								li.filter__item
-									label.filter__label
-										span.filter__label-text
-											+symbol('','icon')
-											span.filter__label-name 7 - 12 кг
-										input.filter__input(type="checkbox" name="filters[]")
-								li.filter__item
-									label.filter__label
-										span.filter__label-text
-											+symbol('','icon')
-											span.filter__label-name более 12 кг
-										input.filter__input(type="checkbox" name="filters[]")
-						.filter
-							.filter__title Цена
-							.filter-prices
-								span.filter-prices__text от
-								input.filter-prices__input(type="number" name="price_from" min="0")
-								span.filter-prices__text до
-								input.filter-prices__input(type="number" name="price_to" min="1")
-								span.filter-prices__text грн
-								button.button.filter-prices__button OK
-
-
-					.sidebar__banner
-						p
-							a(href="/")
-								img(src="img/banners/banner_1.jpg", alt="")
-					
-					.sidebar__banner
-						p
-							a(href="/")
-								img(src="img/banners/banner_2.jpg", alt="")
-
+					include ../section/filters
+				
+					include ../section/banners
 
 				// ====== main ======= 
 				main.main
@@ -285,6 +81,7 @@ block content
 							._row.product-mini
 								a.product-mini__img-holder(href="/product.html")
 									img.product-mini__img(src="img/products/product_5.jpg", alt="")
+									.product-mini__badge.product-mini__badge_new новинка
 								.product-mini__desc
 									a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
 									.product-mini__body
@@ -347,3 +144,5 @@ block content
 							svg.icon
 								use(xlink:href="#reload")
 							span Больше товаров
+							
+	include ../section/contacts

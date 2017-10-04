@@ -4,10 +4,12 @@
 @include font-face('OpenSans-Bold', '../fonts');
 @include font-face('OpenSans-Regular', '../fonts');
 @include font-face('OpenSans-Semibold', '../fonts');
+@include font-face('GiddyupStd', '../fonts');
 
 $OpenSans-Bold: 'OpenSans-Bold', Helvetica, sans-serif;;
 $OpenSans-Regular: 'OpenSans-Regular', Helvetica, sans-serif;;
 $OpenSans-Semibold: 'OpenSans-Semibold', Helvetica, sans-serif;;
+$GiddyupStd: 'GiddyupStd', Helvetica, sans-serif;;
 
 $container-width: 1260px;
 $body-color: #fff;
@@ -15,6 +17,8 @@ $body-font-color: #000;
 
 $lazure: #1ec0c4;
 $pink: #d04fcf;
+
+$footer-height: 55px;
 
 *, *:before, *:after {
   // margin: 0;
@@ -25,14 +29,14 @@ $pink: #d04fcf;
 }
 
 html {
-  // width: 100%;
-  // height: 100%;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
 }
 
 body {
-  // width: 100%;
-  // height: 100%;
+  width: 100%;
+  height: 100%;
   font-family: $OpenSans-Regular;
   font-size: 100%;
   color: $body-font-color;
@@ -135,26 +139,48 @@ input, button {
 }
 
 
-// .wrapper {
-//   position: relative;
-//   max-width: 1800px;
-//   min-height: 100%;
-//   margin: 0 auto;
-//   overflow: hidden;
-//   margin-bottom: - $footer-height;
+.wrapper {
+  position: relative;
+  max-width: 1800px;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: - $footer-height;
 
 
-//   &:after {
-//     content: '';
-//     display: block;
-//     height: $footer-height;
-//   }
-// }
-
-.page-content {
-
+  &:after {
+    content: '';
+    display: block;
+    height: $footer-height;
+  }
 }
 
+/*! --- page-404 --- */
+.page-404 {
+  min-height: 757px;
+  padding: 65px 0;
+  background: #fff url(../img/cat_404.png) center right no-repeat;
+  color: #444;
+}
+
+.page-404__title {
+  font: 250px $GiddyupStd;
+  color: $lazure;
+  line-height: 1em;
+}
+
+.page-404__subtitle {
+  font: 30px $OpenSans-Semibold;
+}
+
+.page-404__link {
+  display: inline-block;
+  margin-top: 30px;
+  padding-left: 5%;
+  font: 30px $OpenSans-Bold;
+  color: $pink;
+  text-decoration: underline;
+}
 
 
 /*! --- owl-carousel --- */

@@ -1,0 +1,65 @@
+// ====== filters ======= 
+.filters
+	.filter
+		.filter__title Бренд
+		ul.filter__list
+			li.filter__item
+				label.filter__label
+					span.filter__label-text
+						+symbol('','icon')
+						span.filter__label-name Cath Kidston
+					input.filter__input(type="checkbox" name="filters[]")
+			li.filter__item
+				label.filter__label
+					span.filter__label-text
+						+symbol('','icon')
+						span.filter__label-name Cheap Monday
+					input.filter__input(type="checkbox" name="filters[]")
+			li.filter__item
+				label.filter__label
+					span.filter__label-text
+						+symbol('','icon')
+						span.filter__label-name Codello
+					input.filter__input(type="checkbox" name="filters[]")
+			li.filter__item
+				label.filter__label
+					span.filter__label-text
+						+symbol('','icon')
+						span.filter__label-name Comme Des F. Down
+					input.filter__input(type="checkbox" name="filters[]")
+	.filter
+		.filter__title Вес
+		ul.filter__list
+			li.filter__item
+				label.filter__label
+					span.filter__label-text
+						+symbol('','icon')
+						span.filter__label-name 1 - 2 кг
+					input.filter__input(type="checkbox" name="filters[]")
+			li.filter__item
+				label.filter__label
+					span.filter__label-text
+						+symbol('','icon')
+						span.filter__label-name 2 - 6 кг
+					input.filter__input(type="checkbox" name="filters[]")
+			li.filter__item
+				label.filter__label
+					span.filter__label-text
+						+symbol('','icon')
+						span.filter__label-name 7 - 12 кг
+					input.filter__input(type="checkbox" name="filters[]")
+			li.filter__item
+				label.filter__label
+					span.filter__label-text
+						+symbol('','icon')
+						span.filter__label-name более 12 кг
+					input.filter__input(type="checkbox" name="filters[]")
+	.filter
+		.filter__title Цена
+		.filter-prices
+			span.filter-prices__text от
+			input.filter-prices__input(type="number" name="price_from" min="0")
+			span.filter-prices__text до
+			input.filter-prices__input(type="number" name="price_to" min="1")
+			span.filter-prices__text грн
+			button.button.filter-prices__button OK

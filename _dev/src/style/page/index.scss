@@ -49,6 +49,26 @@ aside.sidebar {
 	width: 25%;
 	margin-top: 70px;
 	padding: 0 15px;
+
+	.categories__list {
+
+		.categories__link > .icon {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%) rotate(-90deg);
+			width: 15px;
+			height: 15px;
+
+			&:hover {
+				fill: $pink;
+			}
+
+			&_up {
+				transform: translateY(-50%) rotate(90deg);
+			}
+		}
+	}
 }
 
 .sidebar__title {
@@ -107,26 +127,6 @@ aside.sidebar {
 
 	&:hover {
 		background-color: #fff;
-	}
-}
-
-.categories__list {
-
-	.categories__link > .icon {
-		position: absolute;
-		right: 10px;
-		top: 50%;
-		transform: translateY(-50%) rotate(-90deg);
-		width: 15px;
-		height: 15px;
-
-		&:hover {
-			fill: $pink;
-		}
-
-		&_up {
-			transform: translateY(-50%) rotate(90deg);
-		}
 	}
 }
 
@@ -279,4 +279,28 @@ aside.sidebar {
 	100% {
 		transform: rotate(360deg);
 	}
+}
+
+/*! ===== brands ===== */
+.brands {
+
+}
+
+.brands__list {
+	font-size: 0;
+}
+
+.brands__item {
+	display: inline-block;
+	width: 33.33%;
+	margin-top: 25px;
+	font-size: 16px;
+}
+
+.brands__link {
+	display: inline-block;
+}
+
+.brands__img {
+
 }

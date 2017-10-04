@@ -1,0 +1,120 @@
+extends ../main
+
+block content
+	include ../section/categories
+	
+	include ../section/carousel
+
+	// ====== main content ======= 
+	.content
+		._container
+			._row
+				
+				include ../section/aside
+
+					include ../section/banners
+
+				// ====== main ======= 
+				main.main
+					.breadcrumbs
+						ul.breadcrumbs__list
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/") Главная
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/catalog.html") Бренды
+
+					._row.brands
+						ul.brands__list
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_1.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_2.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_3.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_4.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_5.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_6.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_7.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_8.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_9.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_10.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_11.png", alt="")
+							li.brands__item
+								a.brands__link(href="#")
+									img.brands__img(src="img/brands/brand_12.png", alt="")
+						
+					._row.products
+						.products__title Новинки
+						 							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_3.jpg", alt="")
+								.product-mini__badge.product-mini__badge_new новинка
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_4.jpg", alt="")
+								.product-mini__badge.product-mini__badge_new новинка
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_5.jpg", alt="")
+								.product-mini__badge.product-mini__badge_new новинка
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+
+
+					._row.products
+						.products__title акции
+
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_6.jpg", alt="")
+								.product-mini__badge.product-mini__badge_sale Акция
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_7.jpg", alt="")
+								.product-mini__badge.product-mini__badge_sale Акция
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+						.product-mini
+							a.product-mini__img-holder(href="/product.html")
+								img.product-mini__img(src="img/products/product_8.jpg", alt="")
+								.product-mini__badge.product-mini__badge_sale Акция
+							a.product-mini__title(href="#") Когтеточка Trixie 43771 Valencia
+							.product-mini__price 150 грн
+							button.button.product-mini__button В корзину
+							
+	include ../section/contacts

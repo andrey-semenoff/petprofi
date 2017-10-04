@@ -1,10 +1,25 @@
 /*! ===== footer styles ===== */
 
 footer.footer {
-
+	@extend header.header;
+	padding: 10px 15px;
+	font-family: $OpenSans-Regular;
 }
 
-.footer-col {
+.footer__left {
+	float: left;
+	width: 50%;
+	text-align: left;
+	padding-top: 10px;
+}
+
+.footer__right {
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+
+.contacts-col {
 	float: left;
 	width: 33.33%;
 	margin-top: 50px;
@@ -23,11 +38,11 @@ footer.footer {
 	}
 }
 
-.footer-col__title {
+.contacts-col__title {
 
 }
 
-.footer__phones {
+.contacts__phones {
 	position: relative;
 	float: left;
 	width: 50%;
@@ -45,24 +60,24 @@ footer.footer {
 	}
 }
 
-.footer__phone {
+.contacts__phone {
 	margin-top: 5px;
 }
 
-.footer__phone-link {
+.contacts__phone-link {
 	display: inline-block;
 }
 
-.footer__socials {
+.contacts__socials {
 	float: right;
 	width: 50%;
 }
 
-.footer__social {
+.contacts__social {
 	margin-top: 5px;
 }
 
-.footer__social-link {
+.contacts__social-link {
 	display: inline-block;
 
 	.icon {
@@ -72,7 +87,7 @@ footer.footer {
 	}
 }
 
-.footer__address {
+.contacts__address {
 	margin-top: 20px;
 	color: #444;
 
@@ -84,11 +99,11 @@ footer.footer {
 	}
 }
 
-.footer-col {
+.contacts-col {
 	text-align: justify;
 }
 
-.footer-col__title {
+.contacts-col__title {
 	position: relative;
 	height: 60px;
 	background: url(../img/shevron.png) center no-repeat;
@@ -98,24 +113,4 @@ footer.footer {
 	text-align: center;
 	line-height: 60px;
 	color: $lazure;
-}
-
-
-.footer-bottom {
-	@extend header.header;
-	padding: 10px 15px;
-	font-family: $OpenSans-Regular;
-}
-
-.footer-bottom__left {
-	float: left;
-	width: 50%;
-	text-align: left;
-	padding-top: 10px;
-}
-
-.footer-bottom__right {
-	float: right;
-	width: 50%;
-	text-align: right;
 }
