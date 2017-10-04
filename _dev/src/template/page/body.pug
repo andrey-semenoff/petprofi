@@ -1,0 +1,184 @@
+extends ../main
+
+block content
+	// ====== catalog ======= 
+	.categories.categories_top
+		._container
+			ul.categories__list
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--dog")
+						span.categories__item-name Cобаки
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--cat")
+						span.categories__item-name Кошки
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--goldfish")
+						span.categories__item-name Аквариумистика
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--bird")
+						span.categories__item-name Птицы
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--rodents")
+						span.categories__item-name Грызуны
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--trifles")
+						span.categories__item-name Фретки
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--reptiles")
+						span.categories__item-name Рептилии
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--fish")
+						span.categories__item-name Пруд
+				li.categories__item
+					a.categories__link(href="/catalog.html")
+						svg.icon
+							use(xlink:href="#animals--horse")
+						span.categories__item-name Лошади
+
+	// ====== owl-carousel ======= 
+	.carousel-holder
+		.owl-carousel(data-type="main")
+
+			.carousel__item 
+				img(src="img/slider/slide_1.jpg")
+			.carousel__item 
+				img(src="img/slider/slide_2.jpg")
+			.carousel__item 
+				img(src="img/slider/slide_3.jpg")
+			.carousel__item 
+				img(src="img/slider/slide_3.jpg")
+
+	// ====== main content ======= 
+	.content
+		._container
+			._row
+				// ====== aside ======= 
+				aside.sidebar
+					.sidebar__title каталог товаров
+
+					ul.categories__list
+						li.categories__item
+							a.categories__link(href="#") Собаки
+
+						li.categories__item.categories__item_parent
+							a.categories__link(href="#") Кошки
+								+symbol('arrow','icon')
+							ul.categories__list
+								li.categories__item.categories__item_parent
+									a.categories__link(href="#") Корм сухой
+										+symbol('arrow','icon')
+									ul.categories__list
+										li.categories__item
+											a.categories__link(href="#") Корм очень сухой
+										li.categories__item
+											a.categories__link(href="#") Корм средней сухости
+										li.categories__item
+											a.categories__link(href="#") Корм не сухой
+								li.categories__item
+									a.categories__link(href="#") Корм консервированный
+								li.categories__item
+									a.categories__link(href="#") Заменители молока
+								li.categories__item
+									a.categories__link(href="#") Гигиенические наполнители
+								li.categories__item
+									a.categories__link(href="#") Витамины, минералы
+								li.categories__item
+									a.categories__link(href="#") Лакомства
+								li.categories__item
+									a.categories__link(href="#") Игрушки
+								li.categories__item
+									a.categories__link(href="#") Когтеточки
+								li.categories__item
+									a.categories__link(href="#") Места
+								li.categories__item
+									a.categories__link(href="#") Переноски, сумки
+								li.categories__item
+									a.categories__link(href="#") Расчески, щетки, пуходерки
+								li.categories__item
+									a.categories__link(href="#") Миски, поилки и кормушки
+								li.categories__item
+									a.categories__link(href="#") Намордники
+								li.categories__item
+									a.categories__link(href="#") Шампуни
+								li.categories__item
+									a.categories__link(href="#") Косметика и средства гигиены
+								li.categories__item
+									a.categories__link(href="#") Средства для дома
+
+						li.categories__item
+							a.categories__link(href="#") Аквариумистика
+
+						li.categories__item
+							a.categories__link(href="#") Птицы
+
+						li.categories__item
+							a.categories__link(href="#") Грызуны
+
+						li.categories__item
+							a.categories__link(href="#") Фретки
+
+						li.categories__item
+							a.categories__link(href="#") Рептилии
+
+						li.categories__item
+							a.categories__link(href="#") Пруд
+
+						li.categories__item
+							a.categories__link(href="#") Лошади
+
+					// ====== banners ======= 
+					.sidebar__banner
+						p
+							a(href="/")
+								img(src="img/banners/banner_1.jpg", alt="")
+					
+					.sidebar__banner
+						p
+							a(href="/")
+								img(src="img/banners/banner_2.jpg", alt="")
+
+
+				// ====== main ======= 
+				main.main
+					.breadcrumbs
+						ul.breadcrumbs__list
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/") Главная
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="/catalog.html") доставка
+
+					.title доставка
+
+					.page-content
+						p Адресная доставка по Киеву и Киевской области
+						p Доставка в пределах Киева бесплатная при заказе на сумму от 1500 грн. Стоимость доставки заказов до 1500 грн составляет 35 грн.
+						p Товары из раздела "Активный отдых и туризм", "Дом, сад" и "Детский мир" доставляются бесплатно при сумме заказа от 500 грн. 
+						p Товары из раздела "Бытовая техника и интерьер" по Киеву доставляются бесплатно при сумме заказа от 800 грн, стоимость доставки заказов до 800 грн составляет 35 грн. Доставка товаров из данного раздела по Киеву и Украине осуществляется отдельно от доставки товаров из других разделов сайта.
+						p Доставка уцененных товаров не осуществляется. Уцененные товары Вы можете приобрести в нашем выставочном зале.
+						p По Киеву доставка большинства товаров осуществляется с 10:00 до 21:00 в рабочие дни, с 10:00 до 19:00 в субботу и с 10:00 до 17:00 воскресенье. Доставка товаров из раздела "Бытовая техника и интерьер" — с 10:00 до 13:00 и с 16:00 до 21:00, с понедельника по субботу. 
+						p Обычно если вы разместили заказ до 12:00 — мы доставим его в тот же день. В любом случае во время заказа наши менеджеры сразу согласуют с вами время доставки.
+						p Наши сотрудники оперативно доставят заказ по указанному вами адресу в удобное для вас время и продемонстрируют целостность, комплектность и работоспособность товара (для устройств, работающих автономно), а также оформят все необходимые документы. Из соображений безопасности проверка товара и товарно-денежный обмен производятся в автомобиле курьера. 
+						p Крупногабаритные товары из разделов "Фитнес", и "Детский мир" (тренажеры, детские кроватки, детская мебель и т. д.) доставляются с 15:00 до 21:00 в будние дни до квартиры. При наличии лифта занос товара бесплатный, при отсутствии стоимость подъема определяется на месте в зависимости от габаритов, массы и сложности (20-50 грн/этаж).
+						p Товары из раздела «Бытовая техника и интерьер» доставляются до квартиры. Подъём крупногабаритных товаров (от 50 кг) в квартиру бесплатный, если товар в упаковке помещается и поднимается на лифте. Стоимость ручного подъёма зависит от габаритов техники и сложности подъёма и составляет от 20 до 60 гривен. Крупногабаритная техника весом свыше 90 кг поднимается платно с учётом первого этажа (подачи к лифту, подъезду).
+						p Доставка по Киевской области производится в следующие населенные пункты:
+						p Барышевка, Белая Церковь, Белогородка, Березань, Бобрица, Богуслав, Борисполь, Борова, Бородянка, Бортничи, Боярка, Бровары, Буча, Бышев, Васильков, Велика Дымерка, Вишневое, Володарка, Ворзель, Вышгород, Гавриловка, Глеваха, Гоголев, Горенка, Гостомель, Гребени, Гребенки, Демидов, Дениховка, Дибровка, Дослидныцьке, Дымер, Загальцы, Згуровка, Иванков, Ирпень, Кагарлык, Калиновка, Калита, Кожанка, Козин, Коцюбинское, Красиловка, Лесники, Лукаши, Лютеж, Макаров, Медвин, Мироновка, Мотовиловка, Небелица, Новые Петровцы, Обухов, Панфилы, Переяслав-Хмельницкий, Пискивка, Ракитное, Ржищев, Розкишна, Русанов, Семиполки, Сквыра, Ставище, Старые Петровцы, Тараща, Тетиев, Требухов, Узин, Украинка, Устиновка, Фастов, Чайка, Шпитьки, Яготин.
+						p Сроки доставки уточняйте, пожалуйста, у менеджера.
+						p Стоимость доставки по Киевской области составляет 35 гривен.
+						p Стоимость доставки товаров из раздела Бытовая техника и интерьер по Киевской области рассчитывается индивидуально.
+

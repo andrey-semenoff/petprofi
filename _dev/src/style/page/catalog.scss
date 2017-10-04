@@ -132,6 +132,10 @@
 	display: inline-block;
 	vertical-align: middle;
 	color: $lazure;
+
+	&:first-letter {
+		text-transform: capitalize;
+	}
 }
 
 
@@ -146,9 +150,6 @@
 
 .catalog__title {
 	float: left;
-	margin-top: 25px;
-	font: 25px $OpenSans-Bold;
-	text-transform: uppercase;
 }
 
 .catalog__params {

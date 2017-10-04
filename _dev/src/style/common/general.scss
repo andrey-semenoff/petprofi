@@ -129,7 +129,9 @@ input, button {
 
 /*! --- standart title --- */
 .title {
-
+  margin-top: 25px;
+  font: 25px $OpenSans-Bold;
+  text-transform: uppercase;
 }
 
 
@@ -148,6 +150,10 @@ input, button {
 //     height: $footer-height;
 //   }
 // }
+
+.page-content {
+
+}
 
 
 
