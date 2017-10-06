@@ -164,6 +164,14 @@ $(function () {
   })
 
   // next script
+  $('.phones .icon').click(function (e) {
+    var $this = $(this),
+        $list_holder = $this.parent();
+
+    $list_holder.toggleClass('phones__list-holder_show');
+  })
+
+  // next script
 });
 // END DOCUMENT ONLOAD SCRIPTS
 

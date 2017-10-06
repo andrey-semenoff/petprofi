@@ -1,6 +1,7 @@
 /*! ===== header styles ===== */
 
 header.header {
+	position: relative;
 	padding: 25px 15px;
   background: #2d87c6 url(../img/bg_header.jpg) center no-repeat;
   background-size: cover;
@@ -46,15 +47,74 @@ header.header {
 	vertical-align: middle;
 	width: 45%;
 	font-size: 16px;
+	text-align: center;
+}
+
+.phones__list-holder {
+	position: relative;
+	min-height: 34px;
+
+	@include media(992) {
+		width: 60%;
+		margin: 0 auto;
+	}
+	@include media(768) {
+		width: 75%;
+	}
+
+	.icon {
+		display: none;
+		position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    width: 15px;
+    height: 15px;
+    fill: #fff;
+
+    &:hover {
+			fill: $pink;
+    	cursor: pointer;
+    }
+
+  	@include media(992) {
+			display: block;
+		}
+	}
+
+	&_show {
+		.phones__list {
+			height: auto;
+		}
+
+		.icon {
+			transform: translateY(-50%) rotate(-90deg);
+		}
+	}
 }
 
 .phones__list {
+
+	@include media(992) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 34px;
+		overflow: hidden;
+		background: #2d87c6 url(../img/bg_header.jpg) center no-repeat;
+		transition: all 0.5s;
+	}
 
 }
 
 .phones__item {
 	display: inline-block;
 	margin-left: 30px;
+
+	@include media(992) {
+		margin: 0;
+	}
 }
 
 .phones__link {
@@ -119,6 +179,19 @@ header.header {
 			text-shadow: 0 0 5px #fff;
 		}
 	}
+
+	@include media(992) {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 999;
+
+		a {
+			color: #000;
+		}
+	}
 }
 
 .menu {
@@ -127,17 +200,41 @@ header.header {
 
 .enter {
 	float: left;
-	width: 15%;
+	width: 12%;
 	max-width: 180px;
+
+	@include media(992) {
+		float: none;
+		width: 100%;
+		max-width: inherit;
+		text-align: center;
+	}
 }
 
 .enter__link {
+	display: inline-block;
+	@include media(992) {
+		width: 100%;
+		padding: 15px 0;
 
+		&:before {
+			content: '\f090';
+			display: inline-block;
+			margin-right: 10px;
+			font-family: $FontAwesome;
+		}
+	}
 }
 
 .main-menu {
 	float: left;
-	width: 70%;
+	width: 73%;
+
+	@include media(992) {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .main-menu__list {
@@ -147,16 +244,31 @@ header.header {
 .main-menu__item {
 	display: inline-block;
 	margin-left: 30px;
+
+	@include media(992) {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
 }
 
 .main-menu__link {
+	display: inline-block;
 
+	@include media(992) {
+		width: 100%;
+		padding: 15px 0;
+	}
 }
 
 .basket {
 	float: right;
-	width: 15%;
+	width: 14%;
 	max-width: 180px;
+
+	@include media(992) {
+		display: none;
+	}
 }
 
 .basket__link {

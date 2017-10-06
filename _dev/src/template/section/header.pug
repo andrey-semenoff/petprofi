@@ -8,15 +8,15 @@ header.header
 			.main-menu
 				ul.main-menu__list
 					li.main-menu__item
-						a.main-menu__link Мой Зоомагазин
+						a.main-menu__link(href="#") Мой Зоомагазин
 					li.main-menu__item
-						a.main-menu__link Справка
+						a.main-menu__link(href="#") Справка
 					li.main-menu__item
-						a.main-menu__link Статьи
+						a.main-menu__link(href="#") Статьи
 					li.main-menu__item
-						a.main-menu__link Фотогалерея
+						a.main-menu__link(href="#") Фотогалерея
 					li.main-menu__item
-						a.main-menu__link Доска обьявлений
+						a.main-menu__link(href="#") Доска обьявлений
 
 			.basket
 				a.basket__link(href="#") Корзина (пусто)
@@ -29,16 +29,19 @@ header.header
 					img.logo__img.logo__img_mobile(src="img/logo_mobile.svg", alt="logo")
 
 			.phones
-				ul.phones__list
-					li.phones__item
-						a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
-					li.phones__item
-						a.phones__link(href="tel:0487654321") 8 (048) 123 45 67
-					//- li.phones__item
-					//- 	a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
-					//- li.phones__item
-					//- 	a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
-			
+				.phones__list-holder
+					+symbol('arrow', 'icon')
+
+					ul.phones__list
+						li.phones__item
+							a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
+						li.phones__item
+							a.phones__link(href="tel:0487654321") 8 (048) 123 45 67
+						li.phones__item
+							a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
+						li.phones__item
+							a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
+				
 			form._row.form_search#form_search
 				input.form_search__input(type="text" name="s" placeholder="Поиск ")
 				button.button.form_search__button(type="submit")
