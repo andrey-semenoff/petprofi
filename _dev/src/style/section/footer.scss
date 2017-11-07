@@ -25,6 +25,7 @@ footer.footer {
 	margin-top: 50px;
 	padding: 0 15px;
 	color: #444;
+	text-align: justify;
 
 	a {
 		color: #444;
@@ -36,10 +37,63 @@ footer.footer {
 			fill: $lazure;
 		}
 	}
+
+	@include media(640) {
+		width: 50%;
+	}
+
+	&:first-child {
+		@include media(640) {
+			width: 100%;
+		}
+	}
+
+	@include media(480) {
+		width: 100%;
+	}
 }
 
 .contacts-col__title {
+	position: relative;
+	height: 60px;
+	background: url(../img/shevron.png) center no-repeat;
+	background-size: contain;
+	font: 25px $OpenSans-Bold;
+	overflow: hidden;
+	text-align: center;
+	line-height: 60px;
+	color: $lazure;
 
+	@include media(1100) {
+		background-size: cover;
+	}
+
+	@include media(768) {
+		font-size: 20px;
+	}
+
+	@include media(480) {
+		cursor: pointer;
+	}
+
+	.icon {
+		display: none;
+		vertical-align: middle;
+		width: 25px;
+		height: 25px;
+		fill: $lazure;
+		transform: rotate(-90deg);
+
+		@include media(480) {
+			display: inline-block;
+		}
+	}
+
+	&_opened {
+		.icon {
+			transform: rotate(90deg);
+		}
+	}
 }
 
 .contacts__phones {
@@ -58,6 +112,10 @@ footer.footer {
 		height: 20px;
 		background: url(../img/phone.svg) 50% no-repeat;
 	}
+
+	@include media(1100) {
+		width: 100%;
+	}
 }
 
 .contacts__phone {
@@ -71,6 +129,11 @@ footer.footer {
 .contacts__socials {
 	float: right;
 	width: 50%;
+
+	@include media(1100) {
+		width: 100%;
+		margin-top: 15px !important;
+	}
 }
 
 .contacts__social {
@@ -99,18 +162,3 @@ footer.footer {
 	}
 }
 
-.contacts-col {
-	text-align: justify;
-}
-
-.contacts-col__title {
-	position: relative;
-	height: 60px;
-	background: url(../img/shevron.png) center no-repeat;
-	background-size: contain;
-	font: 25px $OpenSans-Bold;
-	overflow: hidden;
-	text-align: center;
-	line-height: 60px;
-	color: $lazure;
-}

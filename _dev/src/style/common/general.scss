@@ -187,13 +187,10 @@ input, button {
 /*! --- owl-carousel --- */
 
 .owl-carousel {
-  // max-width: 925px;
-  // width: 85%;
-  // margin: 0 auto;
   margin-top: 65px;
 
-  @include media(500) {
-    // width: 80%;
+  @include media(768) {
+    margin-top: 30px;
   }
 }
 
@@ -257,6 +254,26 @@ input, button {
   // height: 46px;
 }
 
+.owl-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.owl-dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border: 2px solid $pink;
+  border-radius: 50%;
+
+  &.active {
+    background-color: $pink;
+  }
+}
+
 .carousel-holder {
   height: 30vw;
   max-height: 500px;
@@ -266,6 +283,10 @@ input, button {
 
   @include media(992) {
     height: auto;
+  }
+
+  @include media(768) {
+    max-height: 100%;
   }
 }
 

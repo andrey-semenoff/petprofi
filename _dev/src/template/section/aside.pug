@@ -4,15 +4,19 @@ aside.sidebar
 
 	ul.categories__list
 		li.categories__item
-			a.categories__link(href="#") Собаки
+			a.categories__link(href="#") 
+				+symbol('animals--dog','icon_animal')
+				span Собаки
 
 		li.categories__item.categories__item_parent
-			a.categories__link(href="#") Кошки
-				+symbol('arrow','icon')
+			a.categories__link(href="#")
+				+symbol('animals--cat','icon_animal')
+				span Кошки
+				+symbol('arrow','icon icon_up')
 			ul.categories__list
 				li.categories__item.categories__item_parent
 					a.categories__link(href="#") Корм сухой
-						+symbol('arrow','icon')
+						+symbol('arrow','icon icon_up')
 					ul.categories__list
 						li.categories__item
 							a.categories__link(href="#") Корм очень сухой
@@ -52,22 +56,38 @@ aside.sidebar
 					a.categories__link(href="#") Средства для дома
 
 		li.categories__item
-			a.categories__link(href="#") Аквариумистика
+			a.categories__link(href="#")
+				+symbol('animals--goldfish','icon_animal')
+				span Аквариумистика
 
 		li.categories__item
-			a.categories__link(href="#") Птицы
+			a.categories__link(href="#")
+				+symbol('animals--bird','icon_animal')
+				span Птицы
 
 		li.categories__item
-			a.categories__link(href="#") Грызуны
+			a.categories__link(href="#")
+				+symbol('animals--rodents','icon_animal')
+				span Грызуны
 
 		li.categories__item
-			a.categories__link(href="#") Фретки
+			a.categories__link(href="#")
+				+symbol('animals--trifles','icon_animal')
+				span Фретки
 
 		li.categories__item
-			a.categories__link(href="#") Рептилии
+			a.categories__link(href="#")
+				+symbol('animals--reptiles','icon_animal')
+				span Рептилии
 
 		li.categories__item
-			a.categories__link(href="#") Пруд
+			a.categories__link(href="#")
+				+symbol('animals--fish','icon_animal')
+				span Пруд
 
 		li.categories__item
-			a.categories__link(href="#") Лошади
+			a.categories__link(href="#")
+				+symbol('animals--horse','icon_animal')
+				span Лошади
+
+.clear

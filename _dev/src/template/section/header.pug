@@ -41,9 +41,25 @@ header.header
 							a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
 						li.phones__item
 							a.phones__link(href="tel:0487654321") 8 (048) 765 43 21
-				
-			form._row.form_search#form_search
-				input.form_search__input(type="text" name="s" placeholder="Поиск ")
-				button.button.form_search__button(type="submit")
-					svg.icon
-						use(xlink:href="#search")
+			
+			.header__right
+				form._row.form_search#form_search
+					input.form_search__input(type="text" name="s" placeholder="Поиск ")
+					button.button.form_search__button(type="submit")
+						svg.icon
+							use(xlink:href="#search")
+
+				.mobile-btns
+					a.btn.btn_search
+						svg.icon
+							use(xlink:href="#search")
+								
+					a.btn.btn_basket
+						svg.icon
+							use(xlink:href="#cart")
+								
+					a.btn.btn_burger
+						.burger
+							.burger__bar.burger__bar_top
+							.burger__bar.burger__bar_mid
+							.burger__bar.burger__bar_bot

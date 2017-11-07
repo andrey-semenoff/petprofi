@@ -21,7 +21,7 @@ $(function () {
         items: 3,
       },
       
-      640: {
+      768: {
       	items: 2,
       },
 
@@ -171,7 +171,83 @@ $(function () {
     $list_holder.toggleClass('phones__list-holder_show');
   })
 
+  // open|hide mobile menu
+  $(document).on('click', '.btn_burger', function (e) {
+    var $this = $(this),
+        $btn_search = $this.siblings('.btn_search'),
+        $phones = '';
+
+    if( $btn_search.hasClass('btn_search-close') ) {
+      toggleSearch($btn_search);
+    }
+
+    toggleMenu($this);
+
+    $('.phones__list-holder').removeClass('phones__list-holder_show');
+
+  });
+
+  // open|hide search form
+  $(document).on('click', '.btn_search', function (e) {
+    var $this = $(this),
+        $btn_burger = $this.siblings('.btn_burger');
+
+    if( $btn_burger.children('.burger').hasClass('burger_close') ) {
+      toggleMenu($btn_burger);
+    }
+
+    toggleSearch($this);
+
+    $('.phones__list-holder').removeClass('phones__list-holder_show');
+
+  });
+
+  $(window).resize(function (e) {
+    var $width = $(this).outerWidth(),
+        $btn_search = $('.btn_search'),
+        $btn_burger = $('.btn_burger');
+
+    if( $width > 992 ) {
+      if( $btn_search.hasClass('btn_search-close') ) {
+        toggleSearch($btn_search);
+      }
+
+      if( $btn_burger.children('.burger').hasClass('burger_close') ) {
+        toggleMenu($btn_burger);
+      }
+
+      $('.form_search').attr('style', '');
+      $('.header__menu').attr('style', '');
+    }
+
+    if( $width < 768 ) {
+      $('.categories__list .categories__list').hide();
+      $('.categories__item_parent .icon').removeClass('icon_up');
+    }
+
+    if( $width > 480 ) {
+      $('.contacts-col__content').show();
+    } else {
+      $('.contacts-col__content').hide();
+      $('.contacts-col__content').removeClass('contacts-col__title_opened');
+    }
+
+  });
+
   // next script
+  $('.contacts-col__title').on('click', function(e){
+    var $this = $(this),
+        width = $(window).outerWidth();
+
+    if( width <= 480 ) {
+      $this.toggleClass('contacts-col__title_opened');
+      $this.siblings('.contacts-col__content').slideToggle();
+    }
+  });
+
+  $('.categories__item_parent .icon').click();
+  // next script
+
 });
 // END DOCUMENT ONLOAD SCRIPTS
 
@@ -202,6 +278,21 @@ function checkFilters($this) {
     $item.removeClass("filter__item_active");
     $icon.children().attr('xlink:href', '');
   }
+}
+
+function toggleMenu($this) {
+  var $menu = $('.header__menu');
+  
+  $menu.slideToggle();
+  $this.children('.burger').toggleClass('burger_close');
+}
+
+function toggleSearch($this) {
+  var $form = $('.form_search');
+
+  $this.toggleClass('btn_search-close');
+  $form.slideToggle();
+  $form.find('input').first().focus();
 }
 
 // next function
