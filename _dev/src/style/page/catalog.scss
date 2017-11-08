@@ -28,6 +28,16 @@
 		height: 20px;
 		transform: rotate(-90deg);
 	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&_opened {
+		.icon {
+			transform: rotate(90deg);
+		}
+	}
 }
 
 .filter .filter__list {
@@ -115,6 +125,47 @@
 	&:hover {
 		cursor: pointer;
 		background-color: darken($lazure, 10%);
+	}
+}
+
+.filters-btns {
+	margin-top: 25px;
+}
+
+.filters-btn {
+	display: inline-block;
+	max-width: 45%;
+	width: 130px;
+	height: 35px;
+	line-height: 35px;
+	background-color: #fff;
+	border: 2px solid $pink;
+	border-radius: 35px;
+	font: 16px $OpenSans-Semibold;
+
+	&:hover {
+		color: #fff;
+		cursor: pointer;
+		transition: all 0.5s;
+	}
+
+	&_reset {
+		float: left;
+		color: $lazure;
+		border-color: $lazure;
+
+		&:hover {
+			background-color: $lazure;
+		}
+	}
+	
+	&_submit {
+		float: right;
+		color: $pink;
+
+		&:hover {
+			background-color: $pink;
+		}
 	}
 }
 
@@ -378,7 +429,8 @@
 	}
 }
 
-.catalog-in .sidebar__catalog {
+.catalog-in .sidebar__catalog,
+.infopage .sidebar__catalog {
 	@include media(768) {
 		display: none;
 	}
@@ -387,5 +439,18 @@
 .catalog-in .mobile-cat-nav {
 	@include media(768) {
 		display: block;
+	}
+}
+
+.infopage{
+
+	.mobile-cat-nav {
+		@include media(768) {
+			display: block;
+		}
+	}
+
+	.mobile-cat-nav__btn_filters {
+		display: none;
 	}
 }

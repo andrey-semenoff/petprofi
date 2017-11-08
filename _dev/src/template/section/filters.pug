@@ -1,5 +1,5 @@
 // ====== filters ======= 
-.filters
+form.filters
 	.filter
 		.filter__title
 			span Бренд
@@ -68,4 +68,8 @@
 			span.filter-prices__text до
 			input.filter-prices__input(type="number" name="price_to" min="1")
 			span.filter-prices__text грн
-			button.button.filter-prices__button OK
+			//- button.button.filter-prices__button OK
+
+	._row.filters-btns
+		button.filters-btn.filters-btn_reset(type="reset") Сбросить
+		button.filters-btn.filters-btn_submit(type="submit") Показать

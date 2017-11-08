@@ -95,7 +95,7 @@ footer.footer {
 		width: 25px;
 		height: 25px;
 		fill: $lazure;
-		transform: rotate(-90deg);
+		transform: rotate(90deg);
 
 		@include media(480) {
 			display: inline-block;
@@ -104,7 +104,7 @@ footer.footer {
 
 	&_opened {
 		.icon {
-			transform: rotate(90deg);
+			transform: rotate(-90deg);
 		}
 	}
 }
