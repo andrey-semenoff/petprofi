@@ -55,12 +55,7 @@ $(function () {
     $('.jcarousel-pagination').jcarouselPagination({
       'perPage': 1,
       item: function(page) {
-        var class_active = 'class="active"';
-
-        if( page > 1 ) {
-          class_active = '';
-        }
-        return '<a '+ class_active +' href="#' + page + '"></a>';
+        return '<a href="#' + page + '"></a>';
       }
     })
     .on('jcarouselpagination:active', 'a', function() {
@@ -68,15 +63,15 @@ $(function () {
     })
     .on('jcarouselpagination:inactive', 'a', function() {
         $(this).removeClass('active');
-    });
-
-
+    })
+    .jcarouselPagination('reload');
 
 
   $(window).resize(function (e) {
     var $width = $(this).outerWidth(),
         $btn_search = $('.btn_search'),
         $btn_burger = $('.btn_burger');
+
 
     if( $width > 992 ) {
       if( $btn_search.hasClass('btn_search-close') ) {

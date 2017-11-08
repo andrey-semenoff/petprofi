@@ -161,6 +161,9 @@
 		width: 60.4vw;
 		height: 300px;
 	}
+	@include media(768) {
+		width: 100vw;
+	}
 }
 
 .product-in__more-link {
