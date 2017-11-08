@@ -429,20 +429,13 @@
 	}
 }
 
-.catalog-in .sidebar__catalog,
-.infopage .sidebar__catalog {
-	@include media(768) {
-		display: none;
+.content:not(.content_main) {
+	
+	.sidebar__catalog {
+		@include media(768) {
+			display: none;
+		}
 	}
-}
-
-.catalog-in .mobile-cat-nav {
-	@include media(768) {
-		display: block;
-	}
-}
-
-.infopage{
 
 	.mobile-cat-nav {
 		@include media(768) {
@@ -451,6 +444,18 @@
 	}
 
 	.mobile-cat-nav__btn_filters {
-		display: none;
+		@include media(768) {
+			display: none;
+		}
+	}
+}
+
+.content_catalog-mobile .mobile-cat-nav {
+	@include media(768) {
+		display: block;
+	}
+
+	.mobile-cat-nav__btn_filters {
+		display: block;
 	}
 }

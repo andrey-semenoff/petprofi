@@ -52,6 +52,26 @@ $(function () {
         $('.jcarousel').jcarousel('scroll', '+=1');
     });
 
+    $('.jcarousel-pagination').jcarouselPagination({
+      'perPage': 1,
+      item: function(page) {
+        var class_active = 'class="active"';
+
+        if( page > 1 ) {
+          class_active = '';
+        }
+        return '<a '+ class_active +' href="#' + page + '"></a>';
+      }
+    })
+    .on('jcarouselpagination:active', 'a', function() {
+        $(this).addClass('active');
+    })
+    .on('jcarouselpagination:inactive', 'a', function() {
+        $(this).removeClass('active');
+    });
+
+
+
 
   $(window).resize(function (e) {
     var $width = $(this).outerWidth(),
@@ -71,9 +91,7 @@ $(function () {
       $('.header__menu').attr('style', '');
     }
 
-
     if( $width < 768 ) {
-
       $('.filters').hide();
     } else {
       $('.filters').show();
@@ -138,35 +156,24 @@ $(function () {
 
     var $this = $(this),
         src = $this.children('img').attr('src'),
-        $main_photo = $('.product-in__photo');
+        $main_photo = $('.product-in__photo'),
+        width = $(window).outerWidth();
 
-    $main_photo.attr('src', src);
     $('.product-in__more-link').removeClass('product-in__more-link_active');
     $this.addClass('product-in__more-link_active');
+    
+    if( width > 992 ) {
+      $main_photo.attr('src', src);
+    } else {
+      open_fancy();
+    }
   });
 
   // init fancybox product-in
   $('.product-in__photo-holder').on('click', function (e) {
     e.preventDefault();
     
-    var sources = [],
-        index_num = $('.product-in__more-link_active').parent().index();
-
-    $('.product-in__more-photo').each(function (i, item) {
-      var $item = $(item),
-          src = $item.attr('src');
-      sources.push(src);
-      // sources.push(src.replace('_s' , ''));
-    });
-
-    $.fancybox.open( sources ,
-      {
-        maxWidth: '800px',
-        index: index_num,
-        prevEffect    : 'fade',
-        nextEffect    : 'fade'
-      }
-    )
+    open_fancy();
   });
 
   // select radio
@@ -320,6 +327,28 @@ function toggleSearch($this) {
   $this.toggleClass('btn_search-close');
   $form.slideToggle();
   $form.find('input').first().focus();
+}
+
+// open fancybox with product photos
+function open_fancy() {
+  var sources = [],
+      index_num = $('.product-in__more-link_active').parent().index();
+
+  $('.product-in__more-photo').each(function (i, item) {
+    var $item = $(item),
+        src = $item.attr('src');
+    sources.push(src);
+    // sources.push(src.replace('_s' , ''));
+  });
+
+  $.fancybox.open( sources ,
+    {
+      maxWidth: '800px',
+      index: index_num,
+      prevEffect    : 'fade',
+      nextEffect    : 'fade'
+    }
+  )
 }
 
 // next function

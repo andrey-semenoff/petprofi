@@ -12,6 +12,11 @@
 .product-in__left {
 	float: left;
 	width: 45%;
+
+	@include media(992) {
+		float: none;
+		width: 100%;
+	}
 }
 
 .product-in__jcarousel-photos {
@@ -19,9 +24,18 @@
 	position: relative;
 	padding: 25px 0;
 
+	@include media(992) {
+		width: 100%;
+	}
+
 	.jcarousel {
 		width: 75px;
 		height: 280px;
+
+		@include media(992) {
+			width: 100%;
+			height: 300px;
+		}
 	}
 
 	.jcarousel-nav {
@@ -44,12 +58,36 @@
 			width: 15px;
 			height: 25px;
 		}
+
+		@include media(992) {
+			width: 20%;
+			height: 100%;
+			top: 0;
+			transform: none;
+
+			.icon {
+				width: 45px;
+				height: 80px;
+				fill: $pink;
+			}
+		}
 	}
 
 	.jcarousel-nav_prev {
 		top: 0;
 		.icon {
 			transform: rotate(-90deg);
+		}
+
+		@include media(992) {
+			left: 0;
+
+			.icon {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: rotate(180deg) translateY(50%);
+			}
 		}
 	}
 	
@@ -58,22 +96,71 @@
 		.icon {
 			transform: rotate(90deg);
 		}
+
+		@include media(992) {
+			left: auto;
+			right: 0;
+
+			.icon {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: rotate(0deg) translateY(-50%);
+			}
+		}
+	}
+
+	.jcarousel-pagination {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+
+		a {
+			display: inline-block;
+	    width: 15px;
+	    height: 15px;
+	    margin-left: 5px;
+	    border: 2px solid #d04fcf;
+	    border-radius: 50%;
+
+			&.active {
+				background-color: $pink;
+				cursor: default;
+			}
+		}
+
+		@include media(992) {
+			display: block;
+		}
 	}
 }
 
 .product-in__more {
-    position: relative;
-    list-style: none;
-    width: 100%;
-    height: 20000em;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  list-style: none;
+  width: 100%;
+  height: 20000em;
+  margin: 0;
+  padding: 0;
+
+	@include media(992) {
+		width: 20000em;
+		height: 300px;
+	}
 }
 
 .product-in__more-item {
-    width: 100%;
-    height: 80px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
+
+	@include media(992) {
+		float: left;
+		width: 60.4vw;
+		height: 300px;
+	}
 }
 
 .product-in__more-link {
@@ -86,7 +173,15 @@
 
   &:hover, &_active {
   	box-shadow: inset 0 0 10px $lazure;
+
+		@include media(992) {
+			box-shadow: none;
+		}
   }
+
+	@include media(992) {
+		border: none;
+	}
 }
 
 .product-in__more-photo {
@@ -102,6 +197,10 @@
 	width: 70%;
 	height: 320px;
 	overflow: hidden;
+
+	@include media(992) {
+		display: none;
+	}
 }
 
 .product-in__photo {
@@ -115,7 +214,14 @@
 .product-in__right {
 	float: right;
 	width: 55%;
-	padding-left: 100px;
+	padding-left: 5%;
+
+	@include media(992) {
+		float: none;
+		width: 100%;
+		margin-top: 25px;
+		padding: 0;
+	}
 }
 
 .product-in__status {
