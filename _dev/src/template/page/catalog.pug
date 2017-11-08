@@ -6,14 +6,14 @@ block content
 	include ../section/carousel
 
 	// ====== main content ======= 
-	.content
+	.content.catalog-in
 		._container
 			._row
 				
-				include ../section/aside
-
+				// ====== aside ======= 
+				aside.sidebar
+					include ../section/aside
 					include ../section/filters
-				
 					include ../section/banners
 
 				// ====== main ======= 

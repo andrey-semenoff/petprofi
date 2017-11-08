@@ -63,18 +63,18 @@ img {
   max-width: 100%;
 }
 
-h1[class]:not([class=""]),
-h2[class]:not([class=""]),
-h3[class]:not([class=""]),
-h4[class]:not([class=""]),
-h5[class]:not([class=""]),
-h6[class]:not([class=""]),
-p[class]:not([class=""]) {
+h1[class],
+h2[class],
+h3[class],
+h4[class],
+h5[class],
+h6[class],
+p[class] {
   margin: 0;
   padding: 0;
 }
 
-ul[class]:not([class=""])  {
+ul[class] {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -190,7 +190,7 @@ input, button {
   margin-top: 65px;
 
   @include media(768) {
-    margin-top: 30px;
+    margin-top: 0;
   }
 }
 

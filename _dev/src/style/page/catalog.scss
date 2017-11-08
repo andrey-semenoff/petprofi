@@ -1,15 +1,40 @@
 
 
 /*! ===== filters ===== */
+.filters {
+	@include media(768) {
+		display: none;
+	}
+}
+
 .filter {
 	margin-top: 20px;
 	border-top: 2px solid $pink;
 	color: #444;
+
+	@include media(768) {	
+		margin-top: 0;
+		border-top: none;
+	}
 }
 
 .filter__title {
 	margin-top: 20px;
 	font: 18px $OpenSans-Bold;
+
+	.icon {
+		float: right;
+		width: 25px;
+		height: 20px;
+		transform: rotate(-90deg);
+	}
+}
+
+.filter .filter__list {
+	@include media(768) {	
+		padding-bottom: 20px;
+		border-bottom: 2px solid $pink;
+	}
 }
 
 .filter__item {
@@ -96,7 +121,9 @@
 
 /*! ===== breadcrumbs ===== */
 .breadcrumbs {
-
+	@include media(768) {
+		display: none;
+	}
 }
 
 .breadcrumbs__list {
@@ -276,3 +303,89 @@
 
 }
 
+.mobile-cat-nav {
+	display: none;
+	width: 100%;
+
+	&__btn_back {
+		float: left;
+		color: $lazure;
+		fill: $lazure;
+
+		.icon {
+			display: inline-block;
+			vertical-align: middle;
+			width: 15px;
+			height: 25px;
+			transform: rotate(-180deg);
+		}
+
+		&-title {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 35px;
+			font-family: $OpenSans-Bold;
+			text-transform: capitalize;
+
+			&:visited {
+				color: $lazure;
+			}
+		}
+	
+		&:hover {
+			color: $pink;
+
+			.icon{
+				fill: $pink;
+				animation: arrow_back 2s ease-in-out infinite;
+				transition: all 0.5s;
+			}
+		}
+	}
+
+	&__btn_filters {
+		float: right;
+		color: $lazure;
+		fill: $lazure;
+
+		.icon {
+			display: inline-block;
+			vertical-align: middle;
+			width: 30px;
+			height: 30px;
+		}
+
+		&:hover {
+			color: $pink;
+			
+			.icon{
+				fill: $pink;
+			}
+		}
+	}
+}
+
+
+
+@keyframes arrow_back {
+	0% {
+		transform: translateX(20px) rotate(-180deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(0) rotate(-180deg);
+		opacity: 0.2;
+	}
+}
+
+.catalog-in .sidebar__catalog {
+	@include media(768) {
+		display: none;
+	}
+}
+
+.catalog-in .mobile-cat-nav {
+	@include media(768) {
+		display: block;
+	}
+}

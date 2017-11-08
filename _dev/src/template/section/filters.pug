@@ -1,7 +1,9 @@
 // ====== filters ======= 
 .filters
 	.filter
-		.filter__title Бренд
+		.filter__title
+			span Бренд
+			+symbol('arrow', 'icon')
 		ul.filter__list
 			li.filter__item
 				label.filter__label
@@ -28,7 +30,9 @@
 						span.filter__label-name Comme Des F. Down
 					input.filter__input(type="checkbox" name="filters[]")
 	.filter
-		.filter__title Вес
+		.filter__title
+			span Вес
+			+symbol('arrow', 'icon')
 		ul.filter__list
 			li.filter__item
 				label.filter__label
@@ -55,7 +59,9 @@
 						span.filter__label-name более 12 кг
 					input.filter__input(type="checkbox" name="filters[]")
 	.filter
-		.filter__title Цена
+		.filter__title
+			span Цена
+			+symbol('arrow', 'icon')
 		.filter-prices
 			span.filter-prices__text от
 			input.filter-prices__input(type="number" name="price_from" min="0")

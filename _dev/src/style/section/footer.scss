@@ -11,12 +11,25 @@ footer.footer {
 	width: 50%;
 	text-align: left;
 	padding-top: 10px;
+
+	@include media(480) {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .footer__right {
 	float: right;
 	width: 50%;
 	text-align: right;
+
+	@include media(480) {
+		float: none;
+		width: 100%;
+		margin-top: 15px;
+		text-align: center;
+	}
 }
 
 .contacts-col {

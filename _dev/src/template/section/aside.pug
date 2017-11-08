@@ -1,5 +1,5 @@
-// ====== aside ======= 
-aside.sidebar
+// ====== sidebar catalog ======= 
+.sidebar__catalog
 	.sidebar__title каталог товаров
 
 	ul.categories__list
@@ -90,4 +90,10 @@ aside.sidebar
 				+symbol('animals--horse','icon_animal')
 				span Лошади
 
-.clear
+._row.mobile-cat-nav
+	a.mobile-cat-nav__btn_back(href="catalog.html")
+		+symbol('arrow', 'icon')
+		span.mobile-cat-nav__btn_back-title arden grange
+
+	a.mobile-cat-nav__btn_filters(href="#")
+		+symbol('filter', 'icon')

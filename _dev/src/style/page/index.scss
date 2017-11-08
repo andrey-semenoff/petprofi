@@ -107,6 +107,15 @@ aside.sidebar {
 	text-align: left;
 }
 
+.categories__list
+.categories__list
+.categories__list {
+	@include media(480) {
+		border-bottom: 1px outset cornflowerblue;
+	  background-color: aliceblue;
+	}
+}
+
 .sidebar .categories__item {
 	// display: block;
 	margin-top: 5px;
@@ -137,6 +146,10 @@ aside.sidebar {
 					font-family: $OpenSans-Semibold;
 				}
 			}
+		}
+
+		@include media(480) {
+			margin-left: 0;
 		}
 	}
 }
@@ -190,7 +203,8 @@ aside.sidebar {
 	}
 
 	@include media(768) {
-		width: 100%;	
+		width: 100%;
+		margin-top: 0;
 	}
 
 

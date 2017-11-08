@@ -223,6 +223,8 @@ $(function () {
     if( $width < 768 ) {
       $('.categories__list .categories__list').hide();
       $('.categories__item_parent .icon').removeClass('icon_up');
+
+      $('.filters').hide();
     }
 
     if( $width > 480 ) {
@@ -234,7 +236,7 @@ $(function () {
 
   });
 
-  // next script
+  // show|hide contacts details in footer
   $('.contacts-col__title').on('click', function(e){
     var $this = $(this),
         width = $(window).outerWidth();
@@ -246,6 +248,13 @@ $(function () {
   });
 
   $('.categories__item_parent .icon').click();
+  
+  // show|hide filter on mobile
+  $('.mobile-cat-nav__btn_filters').on('click', function(e){
+    e.preventDefault();
+    $('.filters').slideToggle();
+  });
+  
   // next script
 
 });
