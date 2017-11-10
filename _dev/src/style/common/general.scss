@@ -292,6 +292,7 @@ input, button {
   &__products {
     height: auto;
     max-height: inherit;
+    overflow: unset;
   }
 }
 
@@ -310,6 +311,34 @@ input, button {
   z-index: 99999;
 }
 
+
+.owl-carousel[data-type="same_prod"] {
+  margin-top: 0;
+  padding-bottom: 50px;
+
+  .product-mini {
+    width: auto;
+  }
+
+  .owl-nav {
+    @include media(480) {
+      display: none;
+    }
+  }
+
+  .owl-prev, .owl-next {
+    background: none;
+  }
+
+  .owl-dots {
+    bottom: 0;
+  }
+  
+  .owl-dot {
+    width: 15px;
+    height: 15px;
+  }
+}
 
 /*! --- jcarousel general styles --- */
 .jcarousel {

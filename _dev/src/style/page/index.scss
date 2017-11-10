@@ -247,7 +247,8 @@ aside.sidebar {
 	}
 
 	@include media(480) {
-		width: 100%;	
+		width: 100%;
+		margin-top: 50px;
 	}
 }
 
@@ -386,6 +387,15 @@ aside.sidebar {
 	width: 33.33%;
 	margin-top: 25px;
 	font-size: 16px;
+
+	@include media(768) {
+		width: 50%;
+	}
+	
+	@include media(480) {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .brands__link {

@@ -428,19 +428,3 @@
 		margin: 5px 0;
 	}
 }
-
-.owl-carousel[data-type="same_prod"] {
-	margin-top: 0;
-
-	.product-mini {
-		width: auto;
-	}
-
-	.owl-prev, .owl-next {
-		background: none;
-	}
-
-	.owl-dots {
-		display: none;
-	}
-}

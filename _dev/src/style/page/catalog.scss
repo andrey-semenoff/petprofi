@@ -239,6 +239,10 @@
 	display: inline-block;
 	vertical-align: middle;
 
+	@include media(640) {
+		display: none;
+	}
+
 	span {
 
 	}
@@ -260,6 +264,10 @@
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 45px;
+
+		@include media(768) {
+			margin-left: 20px;
+		}
 }
 
 .catalog__view-link {
@@ -295,12 +303,32 @@
 			float: left;
 			width: 30%;
 			height: 182px;
+
+			@include media(480) {
+				width: 100%;
+			}
 		}
 
 		.product-mini__desc {
 			float: right;
 			width: 70%;
 			padding-left: 30px;
+
+			@include media(480) {
+				width: 100%;
+			}
+
+			.product-mini__button {
+				@include media(640) {
+					width: 55%;
+				}
+
+				@include media(400) {
+					display: block;
+					width: 70%;
+					margin: 15px auto 0;
+				}
+			}
 		}
 
 		.product-mini__body {
@@ -311,6 +339,11 @@
 			display: inline-block;
 			vertical-align: middle;
 			margin: 0;
+
+			@include media(400) {
+				width: 100%;
+				text-align: center;
+			}
 		}
 
 		.product-mini__button {
