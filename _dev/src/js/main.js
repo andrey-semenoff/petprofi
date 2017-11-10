@@ -7,7 +7,42 @@ $(function () {
   
   // owl-carousel on main page
   $(".owl-carousel[data-type='main']").owlCarousel({
-  	items: 3,
+    items: 3,
+    loop: true,
+    smartSpeed: 1000,
+    // autoHeight: true,
+    nav: true,
+    navText: [
+      "<svg class='icon'><use xlink:href='#arrow'></use></svg>",
+      "<svg class='icon'><use xlink:href='#arrow'></use></svg>"
+    ],
+    responsive: {
+      992: {
+        items: 3,
+      },
+      
+      768: {
+        items: 2,
+      },
+
+      0: {
+        items: 1,
+      }
+    },
+
+    onInitialized: enlargeImage,
+    onTranslated: enlargeImage,
+    onTranslate: reduceImage,
+    onDrag: reduceImage,
+    onResize: function() {
+      reduceImage();
+      enlargeImage();
+    }
+  });
+  
+  // owl-carousel on product page
+  $(".owl-carousel[data-type='same_prod']").owlCarousel({
+  	items: 1,
   	loop: true,
   	smartSpeed: 1000,
   	// autoHeight: true,
@@ -19,25 +54,8 @@ $(function () {
   	responsive: {
   		992: {
         items: 3,
-      },
-      
-      768: {
-      	items: 2,
-      },
-
-      0: {
-      	items: 1,
       }
-  	},
-
-    onInitialized: enlargeImage,
-    onTranslated: enlargeImage,
-    onTranslate: reduceImage,
-    onDrag: reduceImage,
-    onResize: function() {
-      reduceImage();
-      enlargeImage();
-    }
+  	}
   });
 
     $('.jcarousel').jcarousel({

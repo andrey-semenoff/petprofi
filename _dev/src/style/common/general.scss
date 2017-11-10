@@ -142,7 +142,7 @@ input, button {
 
 .wrapper {
   position: relative;
-  max-width: 1800px;
+  // max-width: 1800px;
   min-height: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -287,6 +287,11 @@ input, button {
 
   @include media(768) {
     max-height: 100%;
+  }
+
+  &__products {
+    height: auto;
+    max-height: inherit;
   }
 }
 
